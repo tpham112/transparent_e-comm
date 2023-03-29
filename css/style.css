@@ -1,0 +1,689 @@
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Style Guide */
+
+h1 {
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 61px;
+    color: #000000;
+}
+
+h2 {
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 48px;
+    color: #1544C1;
+}
+
+h3 {
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 41px;
+    color: #1544C1;
+}
+
+h4 {
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 35px;
+    color: #1544C1;
+}
+
+body {
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+/* Custom Scroll Bar CSS */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F1F1F1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4A5B6E;
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #96B8C4;
+    border-radius: 12px;
+}
+
+/* Navigation Menu CSS */
+
+nav {
+    /* position: fixed; */
+    width: 100%;
+    padding: 19px 0;
+    background-color: #FFF;
+    font-family: 'Space Grotesk';
+    transition: all 0.4s ease;
+    z-index: 998;
+}
+
+nav.sticky {
+    padding: 13px 0;
+    background: #1544C1;
+}
+
+nav .navbar {
+    width: 92%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .navbar .logo-box {
+    height: 72.69px;
+    width: 177px;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+}
+
+nav .navbar .logo a {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #1544C1;
+}
+
+nav.sticky .navbar .logo a {
+    color: #FFF;
+}
+
+nav .navbar .menu {
+    display: flex;
+    align-items: center;
+}
+
+nav .navbar .menu li {
+    margin: 0 16px;
+    list-style: none;
+}
+
+.navbar .menu li a {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: #1544C1;
+    cursor: pointer;
+}
+
+nav.sticky .navbar .menu li a {
+    color: #FFF;
+}
+
+nav.sticky .navbar .menu li a:hover {
+    color: #0E2431;
+}
+
+.navbar .media-icons a {
+    font-size: 18px;
+    margin: 0 6px;
+    color: #4A5B6E;
+}
+
+nav.sticky .navbar .media-icons a {
+    color: #FFF;
+}
+
+nav .navbar .menu .button button {
+    font-family: 'Space Grotesk';
+    outline: none;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 8px 16px;
+    background: #1544C1;
+    border: 2px solid transparent;
+    border-radius: 32px;
+    transition: all 0.4s ease;
+}
+
+nav .navbar .menu .button button:hover {
+    color: #4070F4;
+    background-color: #FFF;
+    border-color: #4070F4;
+    cursor: pointer;
+}
+
+/* Side Navigation Menu Button CSS */
+
+nav .menu-button, .navbar .cancel-button {
+    position: absolute;
+    color: #FFF;
+    font-size: 20px;
+    right: 30px;
+    top: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .menu-button {
+    color: #4070F4;
+}
+
+nav.sticky .menu-button {
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFF;
+}
+
+/* Banner Section CSS */
+
+.banner {
+    height: 41px;
+    width: 100%;
+    padding: 0px;
+    background-color: #1544C1;
+    font-family: 'Space Grotesk';
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.banner .banner-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .banner-content .banner-text {
+    display: flex;
+    color: #FFF;
+}
+
+/* Home Section CSS */
+
+.home {
+    height: 467px;
+    width: 100%;
+    padding: 0;
+    /* background: url("images/computer_screen.jpeg") no-repeat; */
+    background: #FFF;
+    background-position: 50% 0;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Space Grotesk';
+}
+
+.home .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home .text {
+    text-align: center;
+    width: 796px;
+    margin-top: 59px;
+}
+
+.home .text .text-two {
+    margin-top: 36px;
+}
+
+.home .text .text-three h4 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1544C1;
+}
+
+.home .buttons {
+    margin-top: 57px;
+    display: flex;
+}
+
+.home .buttons button {
+    outline: solid;
+    outline-color: #1544C1;
+    outline-width: 1px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Space Grotesk';
+    width: 200px;
+    padding: 5px;
+    margin: 0 15px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 32px;
+    transition: all 0.3s ease;
+}
+
+.home .buttons .get-started button {
+    outline: solid;
+    outline-color: #1544C1;
+    outline-width: 1px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Space Grotesk';
+    width: 200px;
+    padding: 5px;
+    margin: 0 15px;
+    background-color: #1544C1;
+    border: 1px solid transparent;
+    border-radius: 32px;
+    transition: all 0.4s ease;
+}
+
+.home .buttons button:hover {
+    color: #FFF;
+    background-color: #1544C1;
+    border-color: #1544C1;
+    cursor: pointer;
+}
+
+.home .buttons .get-started button:hover {
+    color: #1544C1;
+    background-color: #FFF;
+    border-color: #1544C1;
+    cursor: pointer;
+}
+
+/* Client Testimonies Section CSS */
+
+.client-testimonies {
+    padding-top: 36px;
+    height: 337px;
+    background-color: #1544C1;
+}
+
+.client-testimonies .content {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Space Grotesk';
+}
+
+.client-testimonies .left-arrow, .right-arrow {
+    color: #FFF;
+    font-size: 30px;
+}
+
+.client-testimonies .left-arrow:hover, .right-arrow:hover {
+    cursor: pointer;
+}
+
+.client-testimonies .client-testimony {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.client-testimonies .client-pic img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    object-position: 15% 1%;
+    border-radius: 50px;
+}
+
+.client-testimonies .client-quote {
+    padding-top: 47px;
+    height: 98px;
+    width: 635px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.86px;
+    width: 635px;
+    color: #FFF;
+    text-align: center;
+}
+
+.client-testimonies .client-name {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.86px;
+    width: 635px;
+    color: #FFF;
+    text-align: center;
+}
+
+.client-testimonies .client-position {
+    margin-top: 2px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.86px;
+    width: 635px;
+    color: #FFF;
+    text-align: center;
+}
+
+/* Client Logos Section CSS */
+
+.client-logos {
+    height: 270px;
+    background: #F1F1F1;
+}
+
+.client-logos .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.client-logos .title {
+    padding-top: 33px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.client-logos .title span {
+    font-size: 32px;
+    font-weight: 700px;
+    line-height: 40.83px;
+    color: #6D6D6D;
+    position: relative;
+}
+
+.client-logos .logos {
+    margin-top: 40px;
+    height: 60px;
+    width: 768px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.client-logos .logos i {
+    font-size: 80px;
+}
+
+/* Services Section CSS */
+
+.services {
+    height: 700px;
+    background-color: #FFF;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.services .boxes {
+    margin-top: 77px;
+    display: flex;
+    justify-content: center;
+}
+
+.services .boxes .box {
+    height: 230px;
+    width: 413px;
+    margin: 0 10px;
+}
+
+.services .topic {
+    margin-bottom: 15px;
+}
+
+.services ul {
+    margin-left: 25px;
+}
+
+.services li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20.42px;
+}
+
+.services .pictures {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.services img {
+    height: 277px;
+    width: 413px;
+    margin: 0 10px;
+}
+
+/* Footer CSS */
+
+footer {
+    padding: 51px 66px 54px 66px;
+    height: 350px;
+    background-color: #1544C1;
+    color: #FFF;
+}
+
+footer .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer h2, h4{
+    color: #FFF;
+}
+
+footer .contact {
+    width: 320px;
+}
+
+footer .contact-info h4:hover {
+    cursor: pointer;
+}
+
+footer .line {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+footer .left {
+    margin-right: 22px;
+}
+
+footer .message {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #FFF;
+    color: #FFF;
+}
+
+footer textarea {
+    margin-top: 16px;
+    background: transparent;
+    border: 1px solid #FFF;
+    color: #FFF;
+    resize: none;
+}
+
+footer .right input {
+    height: 34px;
+    width: 109px;
+    background: transparent;
+    border: 1px solid #FFF;
+    border-radius: 25px;
+    color: #FFF;
+    transition: all 0.3s ease;
+}
+
+footer .right input:hover {
+    background-color: #FFF;
+    cursor: pointer;
+    color: #1544C1;
+}
+
+/* Scroll To Top Button CSS */
+
+.scroll-button i {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 12px;
+    background: #1544C1;
+    color: #FFF;
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Media Query CSS */
+
+@media (max-width: 1190px) {
+    .about .about-details {
+        flex-direction: column;
+    }
+
+    .skills .content {
+        width: 90%;
+    }
+
+    .services .content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1090px) {
+    .about .about-details .right img {
+        height: 350px;
+        width: 350px;
+    }
+
+    .about .about-details .right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about .about-details .left {
+        width: 85%;
+        margin: 40px 0;
+    }
+
+    .services .boxes .box {
+        width: calc(100% / 2 - 20px);
+    }
+
+    .contact .text {
+       width: 90%; 
+    }
+}
+
+@media (max-width: 971px) {
+    .about .about-details .right img {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 750px) {
+    nav .navbar .menu {
+        position: absolute;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        max-width: 400px;
+        width: 100%;
+        background: #0E2431;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+        transition: all 0.5s ease;
+    }
+
+    nav .navbar.active .menu {
+        left: 0;
+    }
+
+    .navbar .menu li a {
+        display: block;
+        margin: 10px 0;
+        font-size: 23px;
+        color: #FFF;
+    }
+
+    nav.sticky .navbar .menu li a:hover {
+        color:  #4A5B6E;
+    }
+
+    .navbar .media-icons a {
+        display: none;
+    }
+
+    nav .menu-button, .navbar .cancel-button {
+        display: block;
+    }
+
+    .home .text .text-two {
+        font-size: 65px;
+    }
+    
+    .home .text .text-three {
+        font-size: 35px;
+    }
+
+    .skills .skills-details {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .skills .skills-details .left {
+        width: 90%;
+    }
+
+    .skills .skills-details .boxes {
+        width: 90%;
+        margin: 40px 0;
+    }
+
+    .services .boxes .box {
+        width: 100%;
+    }
+
+    .contact .text {
+        width: 100%;
+    }
+}
+
+@media (max-width: 520px) {
+    .home .text .text-two {
+        font-size: 55px;
+    }
+    
+    .home .text .text-three {
+        font-size: 33px;
+    }
+}
