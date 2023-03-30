@@ -349,8 +349,9 @@ nav.sticky .menu-button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     row-gap: 12px;
-    height: 100%;
+    height: 98%;
     width: 100%;
 }
 
@@ -363,14 +364,10 @@ nav.sticky .menu-button {
     color: #FFF;
 }
 
-.slide .quote-icon {
-    font-size: 30px;
-    color: #4070f4;
-}
-
 .slide .details {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .details .name {
@@ -390,22 +387,18 @@ nav.sticky .menu-button {
 /* Swiper Button CSS */
 
 .nav-btn {
-    height: 40px;
-    width: 40px;
     border-radius: 50%;
-    transform: translateY(30px);
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #FFF;
     transition: 0.2s;
 }
 
-.nav-btn:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+.nav-btn::after {
+    transform: translateX();
+    color: #1544C1;
 }
 
-.nav-btn::after,
-.nav-btn::before {
-    font-size: 20px;
-    color: #fff;
+.swiper-pagination {
+    margin-bottom: 10px;
 }
 
 .swiper-pagination-bullet {
