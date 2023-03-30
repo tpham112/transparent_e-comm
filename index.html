@@ -5,10 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <script src="https://kit.fontawesome.com/760f168897.js" crossorigin="anonymous"></script>
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>Transparent E-Comm</title>
 </head>
 <body>
@@ -66,20 +64,54 @@
     </section>
 
     <!-- Client Testimonies Section -->
-    <section class="client-testimonies" id="clients">
-        <div class="content">
-            <div class="left-arrow"><i class="fa-solid fa-angle-left"></i></div>
-            <div class="client-testimony">
-                <div class="client-pic">
-                    <img src="images/client_pic-2.jpeg" alt="">
-                </div>
-                <div class="client-quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore recusandae, eaque delectus pariatur reprehenderit a quos excepturi illo vel nulla dolores laborum vitae nobis repellat iste ea natus et officiis?</div>
-                <div class="client-name">Name</div>
-                <div class="client-position">Position</div>
+    <section class="container">
+        <div class="testimonial mySwiper">
+          <div class="testi-content swiper-wrapper">
+            <div class="slide swiper-slide">
+              <img src="images/client_pic-2.jpeg" alt="" class="image" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis corrupti, natus nobis voluptatibus earum neque? Fuga dolorum vero eum sapiente.
+              </p>
+  
+              <i class="bx bxs-quote-alt-left quote-icon"></i>
+  
+              <div class="details">
+                <span class="name">Name</span>
+                <span class="job">Position</span>
+              </div>
             </div>
-            <div class="right-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+            <div class="slide swiper-slide">
+              <img src="images/client_pic-2.jpeg" alt="" class="image" />
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis dolore est quas illo, possimus reprehenderit hic veritatis et atque beatae.
+              </p>
+  
+              <i class="bx bxs-quote-alt-left quote-icon"></i>
+  
+              <div class="details">
+                <span class="name">Name</span>
+                <span class="job">Position</span>
+              </div>
+            </div>
+            <div class="slide swiper-slide">
+              <img src="images/client_pic-2.jpeg" alt="" class="image" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam sapiente incidunt ab doloribus nemo, a possimus asperiores! Autem, expedita sit.
+              </p>
+  
+              <i class="bx bxs-quote-alt-left quote-icon"></i>
+  
+              <div class="details">
+                <span class="name">Name</span>
+                <span class="job">Position</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next nav-btn"></div>
+          <div class="swiper-button-prev nav-btn"></div>
+          <div class="swiper-pagination"></div>
         </div>
-    </section>
+      </section>
 
     <!-- Client Logos Section -->
     <section class="client-logos">
@@ -177,7 +209,24 @@
     </footer>
 
     <!-- Swiper JS -->
-    <script src="js/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>

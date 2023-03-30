@@ -52,6 +52,8 @@ body {
     font-size: 16px;
     line-height: 20px;
     color: #000000;
+    position: relative;
+    height: 100%;
 }
 
 /* Custom Scroll Bar CSS */
@@ -231,7 +233,7 @@ nav.sticky .menu-button {
     height: 467px;
     width: 100%;
     padding: 0;
-    /* background: url("images/computer_screen.jpeg") no-repeat; */
+    /* background: url("images/computer.jpeg") no-repeat; */
     background: #FFF;
     background-position: 50% 0;
     background-size: cover;
@@ -317,37 +319,25 @@ nav.sticky .menu-button {
 
 /* Client Testimonies Section CSS */
 
-.client-testimonies {
-    padding-top: 36px;
+.container {
     height: 337px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #1544C1;
 }
 
-.client-testimonies .content {
+.testimonial {
+    position: relative;
+    height: 337px;
+    max-width: 1280px;
     width: 100%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-family: 'Space Grotesk';
+    padding: 30px 0;
+    overflow: hidden;
 }
 
-.client-testimonies .left-arrow, .right-arrow {
-    color: #FFF;
-    font-size: 30px;
-}
-
-.client-testimonies .left-arrow:hover, .right-arrow:hover {
-    cursor: pointer;
-}
-
-.client-testimonies .client-testimony {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.client-testimonies .client-pic img {
+.testimonial .image {
     height: 100px;
     width: 100px;
     object-fit: cover;
@@ -355,36 +345,84 @@ nav.sticky .menu-button {
     border-radius: 50px;
 }
 
-.client-testimonies .client-quote {
-    padding-top: 47px;
-    height: 98px;
-    width: 635px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17.86px;
-    width: 635px;
-    color: #FFF;
-    text-align: center;
+.testimonial .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 12px;
+    height: 100%;
+    width: 100%;
 }
 
-.client-testimonies .client-name {
-    margin-top: 15px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17.86px;
+.slide p {
+    margin-top: 30px;
     width: 635px;
-    color: #FFF;
     text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFF;
 }
 
-.client-testimonies .client-position {
-    margin-top: 2px;
-    font-size: 14px;
+.slide .quote-icon {
+    font-size: 30px;
+    color: #4070f4;
+}
+
+.slide .details {
+    display: flex;
+    flex-direction: column;
+}
+
+.details .name {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFF;
+}
+
+.details .job {
+    text-align: center;
+    font-size: 16px;
     font-weight: 700;
-    line-height: 17.86px;
-    width: 635px;
     color: #FFF;
-    text-align: center;
+}
+
+/* Swiper Button CSS */
+
+.nav-btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transform: translateY(30px);
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn::after,
+.nav-btn::before {
+    font-size: 20px;
+    color: #fff;
+}
+
+.swiper-pagination-bullet {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #4070f4;
+}
+
+@media screen and (max-width: 768px) {
+.slide p {
+    padding: 0 20px;
+}
+.nav-btn {
+    display: none;
+}
 }
 
 /* Client Logos Section CSS */
