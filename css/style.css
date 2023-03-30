@@ -451,7 +451,7 @@ nav.sticky .menu-button {
     height: 60px;
     width: 768px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .client-logos .logos i {
