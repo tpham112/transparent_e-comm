@@ -239,7 +239,8 @@ nav.sticky .menu-button {
 
 .home .text {
     text-align: center;
-    width: 796px;
+    max-width: 796px;
+    width: 60%;
     margin-top: 59px;
 }
 
@@ -347,7 +348,7 @@ nav.sticky .menu-button {
 
 .slide p {
     margin-top: 30px;
-    width: 635px;
+    width: 50%;
     text-align: center;
     font-size: 16px;
     font-weight: 400;
@@ -439,7 +440,7 @@ nav.sticky .menu-button {
 .client-logos .logos {
     margin-top: 40px;
     height: 60px;
-    width: 768px;
+    width: 52%;
     display: flex;
     justify-content: space-between;
 }
@@ -465,7 +466,7 @@ nav.sticky .menu-button {
 
 .services .boxes .box {
     height: 230px;
-    width: 413px;
+    width: 50%;
     margin: 0 10px;
 }
 
@@ -487,11 +488,12 @@ nav.sticky .menu-button {
     margin-top: 80px;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 .services img {
     height: 277px;
-    width: 413px;
+    width: 50%;
     margin: 0 10px;
 }
 
@@ -514,7 +516,7 @@ footer h2, h4{
 }
 
 footer .contact {
-    width: 320px;
+    width: 27%;
 }
 
 footer .contact-info h4:hover {
@@ -583,9 +585,13 @@ footer .right input:hover {
 /* Responsive Media Query CSS */
 
 /* Laptops/Desktops */
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
     .services .pictures {
         margin-top: 160px;
+    }
+
+    footer .message {
+        display: none;
     }
 }
 
@@ -632,29 +638,6 @@ footer .right input:hover {
     nav .menu-button, nav .phone-button, .navbar .cancel-button {
         display: block;
     }
-
-    .skills .skills-details {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .skills .skills-details .left {
-        width: 90%;
-    }
-
-    .skills .skills-details .boxes {
-        width: 90%;
-        margin: 40px 0;
-    }
-
-    .services .boxes .box {
-        width: 100%;
-    }
-
-    .contact .text {
-        width: 100%;
-    }
 }
 
 /* Portrait Tablets/Large Phones */
@@ -664,7 +647,89 @@ footer .right input:hover {
 
 /* Phones */
 @media screen and (max-width: 600px) {
+    nav .navbar .logo-box {
+        width: 111px;
+        height: 40px;
+        margin-left: 10px;
+    }
 
+    nav .navbar .logo a {
+        font-size: 18px;
+        line-height: 23px;
+        font-weight: 700;
+    }
+
+    nav .phone-button {
+        height: 23.41px;
+        width: 23.41px;
+        font-size: 23px; 
+        top: 21px;
+        right: 70px;
+    }
+
+    nav .menu-button {
+        font-size: 23px;
+        top: 20px;
+        right: 25px;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .home {
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .home .text {
+        width: 390px;
+        margin-top: 21px;
+    }
+
+    .home .text-one h1 {
+        height: 69px;
+        width: 366px;
+        font-size: 27px;
+        line-height: 35px;
+        margin: 0 12px;
+    }
+
+    .home .text-two, .home .text-three {
+        display: none;
+    }
+
+    .home .buttons {
+        margin-top: 25px;
+        width: 341px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home .buttons button {
+        margin: 8px 15px;
+        width: 100%;
+    }
+
+    .home .buttons .get-started {
+        margin-top: 8px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home .buttons .get-started button {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .client-logos .content .logos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* @media (max-width: 750px) {
