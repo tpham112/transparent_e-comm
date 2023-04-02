@@ -68,10 +68,10 @@ nav {
     z-index: 998;
 }
 
-nav.sticky {
+/* nav.sticky {
     padding: 13px 0;
     background: #1544C1;
-}
+} */
 
 nav .navbar {
     width: 92%;
@@ -96,9 +96,9 @@ nav .navbar .logo a {
     color: #1544C1;
 }
 
-nav.sticky .navbar .logo a {
+/* nav.sticky .navbar .logo a {
     color: #FFF;
-}
+} */
 
 nav .navbar .menu {
     display: flex;
@@ -240,7 +240,7 @@ nav.sticky .menu-button {
 .home .text {
     text-align: center;
     max-width: 796px;
-    width: 60%;
+    width: 796px%;
     margin-top: 59px;
 }
 
@@ -412,7 +412,9 @@ nav.sticky .menu-button {
 /* Client Logos Section CSS */
 
 .client-logos {
-    height: 270px;
+    /* height: 270px; */
+    padding-top: 33px;
+    padding-bottom: 94.5px;
     background: #F1F1F1;
 }
 
@@ -423,7 +425,7 @@ nav.sticky .menu-button {
 }
 
 .client-logos .title {
-    padding-top: 33px;
+    /* padding-top: 33px; */
     display: flex;
     justify-content: center;
     align-content: center;
@@ -522,7 +524,7 @@ footer h2, h4{
 }
 
 footer .contact {
-    width: 27%;
+    width: 320px;
 }
 
 footer .contact-info h4:hover {
@@ -591,9 +593,23 @@ footer .right input:hover {
 /* Responsive Media Query CSS */
 
 /* Laptops/Desktops */
-@media screen and (max-width: 1200px) {
-    .services .pictures {
-        margin-top: 160px;
+@media screen and (max-width: 1350px) {
+
+    /* Services Section */
+    .services {
+        padding-top: 33px;
+    }
+    
+    .services .boxes .box {
+        /* height: 230px; */
+        width: 300px;
+        margin: 0 10px;
+    }
+
+    .services li {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20.42px;
     }
 
     footer .message {
@@ -644,11 +660,365 @@ footer .right input:hover {
     nav .menu-button, nav .phone-button, .navbar .cancel-button {
         display: block;
     }
+
+    /* Navbar */
+    nav .navbar .logo-box {
+        width: 111px;
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    nav .navbar .logo a {
+        font-size: 18px;
+        line-height: 23px;
+        font-weight: 700;
+    }
+
+    nav .phone-button {
+        height: 23.41px;
+        width: 23.41px;
+        font-size: 23px; 
+        top: 21px;
+        right: 70px;
+    }
+
+    nav .menu-button {
+        font-size: 23px;
+        top: 20px;
+        right: 25px;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .home {
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .home .text {
+        width: 390px;
+        margin-top: 21px;
+    }
+
+    /* Home Section */
+    .home .text-one h1 {
+        height: 69px;
+        width: 366px;
+        font-size: 27px;
+        line-height: 35px;
+        margin: 0 12px;
+    }
+
+    .home .text-two, .home .text-three {
+        display: none;
+    }
+
+    .home .buttons {
+        margin-top: 25px;
+        width: 341px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home .buttons button {
+        margin: 8px 15px;
+        width: 100%;
+    }
+
+    .home .buttons .get-started {
+        margin-top: 8px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home .buttons .get-started button {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    /* Testimonial Section */
+    .swiper-pagination {
+        display: none;
+    }
+
+    /* Client Logos Section */
+    .client-logos .logos {
+        margin-top: 25px;
+        height: 60px;
+        width: 600px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /* Services Section */
+    .services {
+        /* height: 1719px; */
+        padding-top: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 61px;
+    }
+
+    .services .boxes {
+        /* margin-top: 32px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .services .boxes .box {
+        margin-top: 32px;
+        margin-right: 0;
+        margin-left: 0;
+        /* height: 410px; */
+        width: 350px;
+    }
+
+    .services .pictures {
+        margin-top: 32px;
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+
+    .services img {
+        height: 180px;
+        width: 350px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 50px 20px 77px 21px;
+    }
+
+    footer h2 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    footer h4 {
+        font-size: 22px;
+    }
+
+    footer .contact {
+        width: 349px;
+    }
 }
 
 /* Portrait Tablets/Large Phones */
 @media screen and (max-width: 768px) {
 
+    /* Navbar */
+    nav .navbar .logo-box {
+        width: 111px;
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    nav .navbar .logo a {
+        font-size: 18px;
+        line-height: 23px;
+        font-weight: 700;
+    }
+
+    nav .phone-button {
+        height: 23.41px;
+        width: 23.41px;
+        font-size: 23px; 
+        top: 21px;
+        right: 70px;
+    }
+
+    nav .menu-button {
+        font-size: 23px;
+        top: 20px;
+        right: 25px;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .home {
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .home .text {
+        width: 390px;
+        margin-top: 21px;
+    }
+
+    /* Home Section */
+    .home .text-one h1 {
+        height: 69px;
+        width: 366px;
+        font-size: 27px;
+        line-height: 35px;
+        margin: 0 12px;
+    }
+
+    .home .text-two, .home .text-three {
+        display: none;
+    }
+
+    .home .buttons {
+        margin-top: 25px;
+        width: 341px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home .buttons button {
+        margin: 8px 15px;
+        width: 100%;
+    }
+
+    .home .buttons .get-started {
+        margin-top: 8px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home .buttons .get-started button {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    /* Testimonial Section */
+    .container {
+        height: 199px;
+    }
+
+    .testimonial {
+        height: 199px;
+    }
+
+    .testimonial .image {
+        height: 57px;
+        width: 57px;
+        object-fit: cover;
+        object-position: 15% 1%;
+        border-radius: 50px;
+    }
+
+    .testimonial .slide {
+        row-gap: 5px;
+    }
+
+    .slide p {
+        margin-top: 15px;
+        padding: 0;
+        width: 297px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .slide .details {
+        flex-direction: row;
+    }
+
+    .slide span {
+        margin: 0 3px;
+    }
+
+    .details .name {
+        font-size: 12px;
+    }
+
+    .details .job {
+        font-size: 12px;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+
+    /* Client Logos Section */
+    .client-logos {
+        /* height: 183px; */
+        padding-top: 22px;
+        padding-bottom: 53px;
+    }
+
+    .client-logos .title span {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .client-logos .logos {
+        margin-top: 25px;
+        height: 60px;
+        width: 390px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .client-logos .logos i {
+        font-size: 60px;
+    }
+
+    /* Services Section */
+    .services {
+        /* height: 1719px; */
+        padding-top: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 61px;
+    }
+
+    .services .boxes {
+        /* margin-top: 32px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .services .boxes .box {
+        margin-top: 32px;
+        margin-right: 0;
+        margin-left: 0;
+        /* height: 410px; */
+        width: 350px;
+    }
+
+    .services .pictures {
+        margin-top: 32px;
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+
+    .services img {
+        height: 180px;
+        width: 350px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 50px 20px 77px 21px;
+    }
+
+    footer h2 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    footer h4 {
+        font-size: 22px;
+    }
+
+    footer .contact {
+        width: 349px;
+    }
 }
 
 /* Phones */
@@ -784,14 +1154,6 @@ footer .right input:hover {
     }
 
     /* Client Logos Section */
-    .client-logos {
-        height: 183px;
-    }
-
-    .client-logos .title {
-        padding-top: 22px;
-    }
-
     .client-logos .title span {
         font-size: 28px;
         line-height: 35px;
@@ -822,6 +1184,7 @@ footer .right input:hover {
         /* margin-top: 32px; */
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
     }
 
