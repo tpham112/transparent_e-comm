@@ -647,6 +647,8 @@ footer .right input:hover {
 
 /* Phones */
 @media screen and (max-width: 600px) {
+
+    /* Navbar */
     nav .navbar .logo-box {
         width: 111px;
         height: 40px;
@@ -687,6 +689,7 @@ footer .right input:hover {
         margin-top: 21px;
     }
 
+    /* Home Section */
     .home .text-one h1 {
         height: 69px;
         width: 366px;
@@ -725,6 +728,7 @@ footer .right input:hover {
         margin-right: 0px;
     }
 
+    /* Testimonial Section */
     .container {
         height: 199px;
     }
@@ -773,10 +777,30 @@ footer .right input:hover {
         display: none;
     }
 
-    .client-logos .content .logos {
+    /* Client Logos Section */
+    .client-logos {
+        height: 183px;
+    }
+
+    .client-logos .title {
+        padding-top: 22px;
+    }
+
+    .client-logos .title span {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .client-logos .logos {
+        margin-top: 25px;
+        height: 60px;
+        width: 390px;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .client-logos .logos i {
+        font-size: 60px;
     }
 }
 
