@@ -440,7 +440,7 @@ nav.sticky .menu-button {
 .client-logos .logos {
     margin-top: 40px;
     height: 60px;
-    width: 52%;
+    width: 796px;
     display: flex;
     justify-content: space-between;
 }
@@ -466,7 +466,7 @@ nav.sticky .menu-button {
 
 .services .boxes .box {
     height: 230px;
-    width: 50%;
+    width: 413px;
     margin: 0 10px;
 }
 
@@ -493,7 +493,7 @@ nav.sticky .menu-button {
 
 .services img {
     height: 277px;
-    width: 50%;
+    width: 413px;
     margin: 0 10px;
 }
 
@@ -723,6 +723,54 @@ footer .right input:hover {
         width: 100%;
         margin-left: 0px;
         margin-right: 0px;
+    }
+
+    .container {
+        height: 199px;
+    }
+
+    .testimonial {
+        height: 199px;
+    }
+
+    .testimonial .image {
+        height: 57px;
+        width: 57px;
+        object-fit: cover;
+        object-position: 15% 1%;
+        border-radius: 50px;
+    }
+
+    .testimonial .slide {
+        row-gap: 5px;
+    }
+
+    .slide p {
+        margin-top: 15px;
+        padding: 0;
+        width: 297px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .slide .details {
+        flex-direction: row;
+    }
+
+    .slide span {
+        margin: 0 3px;
+    }
+
+    .details .name {
+        font-size: 12px;
+    }
+
+    .details .job {
+        font-size: 12px;
+    }
+
+    .swiper-pagination {
+        display: none;
     }
 
     .client-logos .content .logos {
