@@ -502,7 +502,7 @@ nav.sticky .menu-button {
 
 footer {
     padding: 51px 66px 54px 66px;
-    height: 350px;
+    /* height: 350px; */
     background-color: #1544C1;
     color: #FFF;
 }
@@ -834,6 +834,24 @@ footer .right input:hover {
     .services img {
         height: 180px;
         width: 350px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 50px 20px 77px 21px;
+    }
+
+    footer h2 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    footer h4 {
+        font-size: 22px;
+    }
+
+    footer .contact {
+        width: 349px;
     }
 }
 
