@@ -261,9 +261,6 @@ nav.sticky .menu-button {
 }
 
 .home .buttons button {
-    outline: solid;
-    outline-color: #1544C1;
-    outline-width: 1px;
     color: #000000;
     font-size: 14px;
     font-weight: 700;
@@ -273,14 +270,12 @@ nav.sticky .menu-button {
     margin: 0 15px;
     background: transparent;
     border: 1px solid transparent;
+    border-color: #1544C1;
     border-radius: 32px;
     transition: all 0.3s ease;
 }
 
 .home .buttons .get-started button {
-    outline: solid;
-    outline-color: #1544C1;
-    outline-width: 1px;
     color: #FFF;
     font-size: 14px;
     font-weight: 700;
@@ -290,6 +285,7 @@ nav.sticky .menu-button {
     margin: 0 15px;
     background-color: #1544C1;
     border: 1px solid transparent;
+    border-color: #1544C1;
     border-radius: 32px;
     transition: all 0.4s ease;
 }
