@@ -275,7 +275,37 @@ nav.sticky .menu-button {
     transition: all 0.3s ease;
 }
 
+.home .buttons input {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Space Grotesk';
+    width: 200px;
+    padding: 5px;
+    margin: 0 15px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-color: #1544C1;
+    border-radius: 32px;
+    transition: all 0.3s ease;
+}
+
 .home .buttons .get-started button {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Space Grotesk';
+    width: 200px;
+    padding: 5px;
+    margin: 0 15px;
+    background-color: #1544C1;
+    border: 1px solid transparent;
+    border-color: #1544C1;
+    border-radius: 32px;
+    transition: all 0.4s ease;
+}
+
+.home .buttons .get-started input {
     color: #FFF;
     font-size: 14px;
     font-weight: 700;
@@ -297,7 +327,21 @@ nav.sticky .menu-button {
     cursor: pointer;
 }
 
+.home .buttons input:hover {
+    color: #FFF;
+    background-color: #1544C1;
+    border-color: #1544C1;
+    cursor: pointer;
+}
+
 .home .buttons .get-started button:hover {
+    color: #1544C1;
+    background-color: #FFF;
+    border-color: #1544C1;
+    cursor: pointer;
+}
+
+.home .buttons .get-started input:hover {
     color: #1544C1;
     background-color: #FFF;
     border-color: #1544C1;
@@ -715,7 +759,7 @@ footer .right input:hover {
         align-items: center;
     }
 
-    .home .buttons button {
+    .home .buttons input {
         margin: 8px 15px;
         width: 100%;
     }
@@ -727,7 +771,7 @@ footer .right input:hover {
         justify-content: center;
     }
 
-    .home .buttons .get-started button {
+    .home .buttons .get-started input {
         width: 100%;
         margin-left: 0px;
         margin-right: 0px;
@@ -867,7 +911,7 @@ footer .right input:hover {
         align-items: center;
     }
 
-    .home .buttons button {
+    .home .buttons input {
         margin: 8px 15px;
         width: 100%;
     }
@@ -879,7 +923,7 @@ footer .right input:hover {
         justify-content: center;
     }
 
-    .home .buttons .get-started button {
+    .home .buttons .get-started input {
         width: 100%;
         margin-left: 0px;
         margin-right: 0px;
@@ -1080,7 +1124,7 @@ footer .right input:hover {
         align-items: center;
     }
 
-    .home .buttons button {
+    .home .buttons input {
         margin: 8px 15px;
         width: 100%;
     }
@@ -1092,7 +1136,7 @@ footer .right input:hover {
         justify-content: center;
     }
 
-    .home .buttons .get-started button {
+    .home .buttons .get-started input {
         width: 100%;
         margin-left: 0px;
         margin-right: 0px;
@@ -1219,83 +1263,3 @@ footer .right input:hover {
         width: 349px;
     }
 }
-
-/* @media (max-width: 750px) {
-    nav .navbar .menu {
-        position: absolute;
-        left: -100%;
-        top: 0;
-        height: 100vh;
-        max-width: 400px;
-        width: 100%;
-        background: #0E2431;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 60px;
-        transition: all 0.5s ease;
-    }
-
-    nav .navbar.active .menu {
-        left: 0;
-    }
-
-    .navbar .menu li a {
-        display: block;
-        margin: 10px 0;
-        font-size: 23px;
-        color: #FFF;
-    }
-
-    nav.sticky .navbar .menu li a:hover {
-        color:  #4A5B6E;
-    }
-
-    .navbar .media-icons a {
-        display: none;
-    }
-
-    nav .menu-button, .navbar .cancel-button {
-        display: block;
-    }
-
-    .home .text .text-two {
-        font-size: 65px;
-    }
-    
-    .home .text .text-three {
-        font-size: 35px;
-    }
-
-    .skills .skills-details {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .skills .skills-details .left {
-        width: 90%;
-    }
-
-    .skills .skills-details .boxes {
-        width: 90%;
-        margin: 40px 0;
-    }
-
-    .services .boxes .box {
-        width: 100%;
-    }
-
-    .contact .text {
-        width: 100%;
-    }
-} */
-
-/* @media (max-width: 520px) {
-    .home .text .text-two {
-        font-size: 55px;
-    }
-    
-    .home .text .text-three {
-        font-size: 33px;
-    }
-} */
