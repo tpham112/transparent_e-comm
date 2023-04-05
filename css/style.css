@@ -260,7 +260,7 @@ nav.sticky .menu-button {
     display: flex;
 }
 
-.home .buttons button {
+/* .home .buttons button {
     color: #000000;
     font-size: 14px;
     font-weight: 700;
@@ -273,7 +273,7 @@ nav.sticky .menu-button {
     border-color: #1544C1;
     border-radius: 32px;
     transition: all 0.3s ease;
-}
+} */
 
 .home .buttons input {
     color: #000000;
@@ -288,9 +288,35 @@ nav.sticky .menu-button {
     border-color: #1544C1;
     border-radius: 32px;
     transition: all 0.3s ease;
+    text-align: center;
 }
 
-.home .buttons .get-started button {
+input:focus::placeholder {
+    color: transparent;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+:-moz-placeholder {
+    text-align: center;
+}
+
+::placeholder {
+    color: #000000;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #000000;
+}
+
+::-ms-input-placeholder {
+    color: #000000;
+}
+
+/* .home .buttons .get-started button {
     color: #FFF;
     font-size: 14px;
     font-weight: 700;
@@ -303,7 +329,7 @@ nav.sticky .menu-button {
     border-color: #1544C1;
     border-radius: 32px;
     transition: all 0.4s ease;
-}
+} */
 
 .home .buttons .get-started input {
     color: #FFF;
@@ -320,26 +346,26 @@ nav.sticky .menu-button {
     transition: all 0.4s ease;
 }
 
-.home .buttons button:hover {
+/* .home .buttons button:hover {
     color: #FFF;
     background-color: #1544C1;
     border-color: #1544C1;
     cursor: pointer;
-}
+} */
 
 .home .buttons input:hover {
-    color: #FFF;
+    /* color: #FFF;
     background-color: #1544C1;
-    border-color: #1544C1;
+    border-color: #1544C1; */
     cursor: pointer;
 }
 
-.home .buttons .get-started button:hover {
+/* .home .buttons .get-started button:hover {
     color: #1544C1;
     background-color: #FFF;
     border-color: #1544C1;
     cursor: pointer;
-}
+} */
 
 .home .buttons .get-started input:hover {
     color: #1544C1;
