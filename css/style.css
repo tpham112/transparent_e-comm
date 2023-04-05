@@ -475,6 +475,53 @@ input:focus::placeholder {
 }
 }
 
+/* Client Logos Carousel CSS */
+.logos-container {
+    padding-top: 33px;
+    padding-bottom: 30px;
+    width: 100%;
+    background: #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logos-container .title {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.logos-container .title span {
+    font-size: 32px;
+    font-weight: 700px;
+    line-height: 40.83px;
+    color: #6D6D6D;
+    position: relative;
+}
+
+.logos-container .logos {
+    position: relative;
+    height: 230px;
+    max-width: 1280px;
+    width: 100%;
+    padding: 30px 0;
+    overflow: hidden;    
+}
+
+.logos-container .slide {
+    margin-top: 40px;
+    height: 60px;
+    width: 796px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logos-container .logos i {
+    font-size: 80px;
+}
+
 /* Client Logos Section CSS */
 
 .client-logos {
