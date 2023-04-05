@@ -55,7 +55,7 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-var swiper = new Swiper(".autoswipe", {
+var swiper = new Swiper(".myClientSwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
@@ -66,9 +66,5 @@ var swiper = new Swiper(".autoswipe", {
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
+    }
 });

@@ -260,20 +260,6 @@ nav.sticky .menu-button {
     display: flex;
 }
 
-/* .home .buttons button {
-    color: #000000;
-    font-size: 14px;
-    font-weight: 700;
-    font-family: 'Space Grotesk';
-    width: 200px;
-    padding: 5px;
-    margin: 0 15px;
-    background: transparent;
-    border: 1px solid transparent;
-    border-color: #1544C1;
-    border-radius: 32px;
-    transition: all 0.3s ease;
-} */
 
 .home .buttons input {
     color: #000000;
@@ -316,21 +302,6 @@ input:focus::placeholder {
     color: #000000;
 }
 
-/* .home .buttons .get-started button {
-    color: #FFF;
-    font-size: 14px;
-    font-weight: 700;
-    font-family: 'Space Grotesk';
-    width: 200px;
-    padding: 5px;
-    margin: 0 15px;
-    background-color: #1544C1;
-    border: 1px solid transparent;
-    border-color: #1544C1;
-    border-radius: 32px;
-    transition: all 0.4s ease;
-} */
-
 .home .buttons .get-started input {
     color: #FFF;
     font-size: 14px;
@@ -346,13 +317,6 @@ input:focus::placeholder {
     transition: all 0.4s ease;
 }
 
-/* .home .buttons button:hover {
-    color: #FFF;
-    background-color: #1544C1;
-    border-color: #1544C1;
-    cursor: pointer;
-} */
-
 .home .buttons input:hover {
     /* color: #FFF;
     background-color: #1544C1;
@@ -360,12 +324,6 @@ input:focus::placeholder {
     cursor: pointer;
 }
 
-/* .home .buttons .get-started button:hover {
-    color: #1544C1;
-    background-color: #FFF;
-    border-color: #1544C1;
-    cursor: pointer;
-} */
 
 .home .buttons .get-started input:hover {
     color: #1544C1;
