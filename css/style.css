@@ -480,6 +480,50 @@ input:focus::placeholder {
     font-size: 80px;
 }
 
+/* Our Clients CSS */
+.our-clients {
+    padding: 47px 80px 107px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our-clients h1 {
+    text-align: center;
+    color: #1544C1;
+    margin-bottom: 45px;
+}
+
+.our-clients h3 {
+    text-align: center;
+    color: #000;
+}
+
+.our-clients .videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.our-clients .video {
+    margin-top: 48px;
+    width: 413px;
+}
+
+.our-clients h4 {
+    text-align: center;
+    color: #000;
+}
+
+.our-clients video {
+    margin-top: 20px;
+}
+
+.our-clients hr {
+    margin-top: 108px;
+    margin-bottom: 74px;
+}
+
 /* Services Section CSS */
 
 .services {
@@ -550,6 +594,7 @@ footer .content {
 
 footer h2, h4{
     color: #FFF;
+    text-decoration: none;
 }
 
 footer .contact {
@@ -563,6 +608,12 @@ footer .contact-info h4:hover {
 footer .line {
     margin-top: 15px;
     margin-bottom: 30px;
+}
+
+footer .footer-logo img {
+    height: 150px;
+    width: 250px;
+    object-fit: cover;
 }
 
 footer .left {
@@ -617,6 +668,7 @@ footer .right input:hover {
     font-size: 18px;
     border-radius: 6px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    z-index: 999;
 }
 
 /* Responsive Media Query CSS */
@@ -639,6 +691,12 @@ footer .right input:hover {
 
     footer .message {
         display: none;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .our-clients .videos {
+        flex-direction: column;
     }
 }
 
@@ -967,6 +1025,54 @@ footer .right input:hover {
         display: none;
     }
 
+    /* Our Clients Section */
+    .our-clients {
+        padding: 30px 22px 62px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .our-clients h1 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .our-clients h3 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .our-clients h4 {
+        font-size: 18px;
+        line-height: 29px;
+    }
+
+    .our-clients .videos {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .our-clients .video {
+        margin-top: 33px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .our-clients video {
+        margin-top: 16px;
+        width: 347.65px;
+        height: 228.12px;
+    }
+
+    .our-clients hr {
+        width: 344px;
+        margin-top: 78px;
+        margin-bottom: 50px;
+    }
+
     /* Client Logos Section */
     .client-logos {
         /* height: 183px; */
@@ -1071,6 +1177,10 @@ footer .right input:hover {
 
     footer .contact {
         width: 349px;
+    }
+
+    footer .footer-logo {
+        display: none;
     }
 }
 
