@@ -352,7 +352,7 @@ input:focus::placeholder {
     overflow: hidden;
 }
 
-.testimonial .image {
+.testimonial img {
     height: 100px;
     width: 100px;
     object-fit: cover;
@@ -611,8 +611,8 @@ footer .line {
 }
 
 footer .footer-logo img {
-    height: 150px;
-    width: 250px;
+    height: 135px;
+    width: 197px;
     object-fit: cover;
 }
 
