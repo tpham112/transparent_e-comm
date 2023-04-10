@@ -692,6 +692,10 @@ footer .right input:hover {
     footer .message {
         display: none;
     }
+
+    footer img {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1010px) {
