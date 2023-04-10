@@ -597,6 +597,16 @@ footer h2, h4{
     text-decoration: none;
 }
 
+a[href^="tel"]{
+    color:inherit;
+    text-decoration:none;
+}
+
+a[href^="mailto"]{
+    color:inherit;
+    text-decoration:none;
+}
+
 footer .contact {
     width: 320px;
 }
