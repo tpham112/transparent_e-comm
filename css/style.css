@@ -261,7 +261,7 @@ nav.sticky .menu-button {
 }
 
 
-.home .buttons input {
+.home .buttons input, .home .buttons a {
     color: #000000;
     font-size: 14px;
     font-weight: 700;
