@@ -57,12 +57,14 @@
                 <div class="text-two"><body>Our digital agency offers full service and self service options on Meta, Snapchat, Google, TikTok, and Programmatic platforms. We offer simple pricing or custom packages to meet your business needs. Ask about our free compliance deck for Meta ads.</body></div>
                 <div class="text-three"><h4>Oh and it’s free for the first 30 days!</h4></div>
             </div>
-            <div class="buttons">
-                <input type="text" id="name" placeholder="Name">
-                <input type="email" id="email" placeholder="E-Mail">
-                <input type="phone" id="phone" placeholder="Phone">
-                <div class="get-started"><input type="submit" value="Get Started"></div>
-            </div>
+            <form action="" name="contact" method="POST" netlify>
+                <div class="buttons">
+                    <input type="text" id="name" placeholder="Name">
+                    <input type="email" id="email" placeholder="E-Mail">
+                    <input type="phone" id="phone" placeholder="Phone">
+                    <div class="get-started"><input type="submit" value="Get Started"></div>
+                </div>
+            </form>
         </div>
     </section>
 
@@ -238,25 +240,27 @@
             <div class="footer-logo">
                 <img src="images/Transparent.png" alt="transparent logo">
             </div>
-            <div class="message">
-                <div class="left">
-                    <form action="">
-                        <label for="fname">Name*</label><br>
-                        <input style="width: 197px" type="text" id="fname" name="fname"><br><br>
-                        <label for="femail">E-mail*</label><br>
-                        <input style="width: 197px" type="email" id="femail" name="femail"><br><br>
-                        <label for="fphone">Phone*</label><br>
-                        <input style="width: 197px" type="tel" id="fphone" name="fphone"><br><br>
-                    </form>
+            <form action="" name="fcontact" method="POST" netlify>
+                <div class="message">
+                    <div class="left">
+                        <div>
+                            <label for="fname">Name*</label><br>
+                            <input style="width: 197px" type="text" id="fname" name="fname"><br><br>
+                            <label for="femail">E-mail*</label><br>
+                            <input style="width: 197px" type="email" id="femail" name="femail"><br><br>
+                            <label for="fphone">Phone*</label><br>
+                            <input style="width: 197px" type="tel" id="fphone" name="fphone"><br><br>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div>
+                            <label for="fmessage">Message*</label><br>
+                            <textarea id="fmessage" name="fmessage" rows="9" cols="60"></textarea><br><br>
+                        </div>
+                        <input type="submit" value="Submit">
+                    </div>
                 </div>
-                <div class="right">
-                    <form action="">
-                        <label for="fmessage">Message*</label><br>
-                        <textarea id="fmessage" name="fmessage" rows="8" cols="60"></textarea><br><br>
-                    </form>
-                    <input type="submit" value="Submit">
-                </div>
-            </div>
+            </form>
         </div>
     </footer>
 
