@@ -515,7 +515,7 @@ input:focus::placeholder {
     color: #000;
 }
 
-.our-clients video {
+.our-clients video, .our-clients iframe {
     margin-top: 20px;
 }
 
@@ -682,6 +682,21 @@ footer .right input:hover {
 }
 
 /* Responsive Media Query CSS */
+
+/* Ultrawide Monitors */
+@media screen and (min-width: 1800px) {
+    /* Our Clients Section */
+    .our-clients .videos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .our-clients .video {
+        margin-left: 0.25%;
+        margin-right: 0.25%;
+    }
+}
 
 /* Laptops/Desktops */
 @media screen and (max-width: 1350px) {
