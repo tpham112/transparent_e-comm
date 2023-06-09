@@ -1130,6 +1130,10 @@ footer .right input:hover {
         font-size: 60px;
     }
 
+    .client-logos .logos img {
+        font-size: 60px;
+    }
+
     /* Client Logos Carousel CSS */
     .logos-container {
         padding-top: 22px;
@@ -1150,6 +1154,10 @@ footer .right input:hover {
     }
 
     .logos-container .logos i {
+        font-size: 60px;
+    }
+
+    .logos-container .logos img {
         font-size: 60px;
     }
 
@@ -1366,6 +1374,10 @@ footer .right input:hover {
     }
 
     .client-logos .logos i {
+        font-size: 60px;
+    }
+
+    .client-logos .logos img {
         font-size: 60px;
     }
 
