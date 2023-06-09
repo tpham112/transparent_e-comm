@@ -480,6 +480,10 @@ input:focus::placeholder {
     font-size: 80px;
 }
 
+.logos-container .logos img {
+    font-size: 80px;
+}
+
 /* Our Clients CSS */
 .our-clients {
     padding: 47px 80px 107px;
