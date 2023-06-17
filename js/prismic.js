@@ -6,19 +6,39 @@ const routes = [
 ]
 const client = prismic.createClient(repositoryName, { routes })
 
+// const fillTestimonials = (testimonials) => {
+//     for (let i = 0; i < testimonials.length; i++) {
+//         const nameHTML = prismic.asHTML(testimonials[i].name)
+//         const jobHTML = prismic.asHTML(testimonials[i].job)
+//         const quoteHTML = prismic.asHTML(testimonials[i].quote)
+//         const nameContainer = document.getElementById(`name-container-${i}`)
+//         const jobContainer = document.getElementById(`job-container-${i}`)
+//         const quoteContainer = document.getElementById(`quote-container-${i}`)
+//         nameContainer.innerHTML = nameHTML
+//         jobContainer.innerHTML = jobHTML
+//         quoteContainer.innerHTML = quoteHTML
+//     }
+// }
+
 const fillTestimonials = (testimonials) => {
     for (let i = 0; i < testimonials.length; i++) {
         const nameHTML = prismic.asHTML(testimonials[i].name)
         const jobHTML = prismic.asHTML(testimonials[i].job)
         const quoteHTML = prismic.asHTML(testimonials[i].quote)
-        const nameContainer = document.getElementById(`name-container-${i}`)
-        const jobContainer = document.getElementById(`job-container-${i}`)
-        const quoteContainer = document.getElementById(`quote-container-${i}`)
-        nameContainer.innerHTML = nameHTML
-        jobContainer.innerHTML = jobHTML
-        quoteContainer.innerHTML = quoteHTML
+        const slidesContainer = document.getElementById('slides-container')
+        slidesContainer.innerHTML +=
+            `<div class="slide swiper-slide">
+            <!-- <img src="images/client_pic-2.jpeg" alt="" class="image" /> -->
+            <div class="details">
+                <span id="name-container-0" class="name">${nameHTML}</span>
+                <span id="job-container-0" class="job">${jobHTML}</span>
+            </div>
+            <div id="quote-container-0" class="quote">${quoteHTML}</div>
+            <!-- <i class="bx bxs-quote-alt-left quote-icon"></i> -->
+            </div>`
     }
 }
+
 
 const fillClients = (clients) => {
     for (let i = 0; i < clients.length; i++) {
@@ -46,7 +66,7 @@ const fillServices = (services) => {
 
 const init = async () => {
     const prismicDoc = await client.getByUID('homepage', 'homepage') // custom type (name) and uid (api id)?
-    const { banner, headline, tagline, subtagline, testimonials, clients, services } = prismicDoc.data // title and description could be different
+    const { banner, headline, tagline, subtagline, testimonials, clients, services, contact_email, contact_number } = prismicDoc.data // title and description could be different
 
     const bannerHTML = prismic.asHTML(banner)
     const bannerContainer = document.getElementById('banner-container')
@@ -70,25 +90,13 @@ const init = async () => {
 
     fillServices(services)
 
-    // const nameHTML = prismic.asHTML(testimonials[0].name)
-    // const slidesContainer = document.getElementById('slides-container')
-    // slidesContainer.innerHTML +=
-    //     `<div class="slide swiper-slide">
-    //         <!-- <img src="images/client_pic-2.jpeg" alt="" class="image" /> -->
-    //         <div class="details">
-    //             <span class="name">${nameHTML}</span>
-    //             <span class="job">CEO, Soul CBD</span>
-    //         </div>
-    //         <p>
-    //             Our relationship with Transparent eComm went from consulting to utilizing their full-service marketing team in just a quarter. They are a great digital agency, but what sets them apart is their focus on business performance, not marketing performance. They have been a vital part of our 76% growth!
-    //         </p>
-    //         <p>
-    //             We struggled to run ads on Facebook and Instagram for over a year before meeting Cameron and his team. Now we are spending 50k+ a month with them and are trying Snapchat and TikTok.
-    //         </p>
+    const contactEmailHTML = prismic.asHTML(contact_email)
+    const contactEmailContainer = document.getElementById('contact-email-container')
+    contactEmailContainer.innerHTML = contactEmailHTML
 
-    //         <i class="bx bxs-quote-alt-left quote-icon"></i>
-    //     </div>`
-
+    const contactNumberHTML = contact_number[0].text
+    const contactNumberContainer = document.getElementById('contact-number-container')
+    contactNumberContainer.innerHTML = `<a href="tel: ${contactNumberHTML}">${contactNumberHTML}</a>`
 }
 
 init()
