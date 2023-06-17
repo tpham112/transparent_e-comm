@@ -433,9 +433,9 @@ input:focus::placeholder {
     color: #1544C1;
 }
 
-.swiper-pagination {
-    /* margin-bottom: 10px; */
-}
+/* .swiper-pagination {
+    margin-bottom: 10px;
+} */
 
 .swiper-pagination-bullet {
     background-color: rgba(0, 0, 0, 0.8);
@@ -580,10 +580,11 @@ input:focus::placeholder {
 }
 
 .services ul {
-    margin-left: 25px;
+    margin-left: 10px;
 }
 
 .services li {
+    list-style-type: disc;
     font-weight: 400;
     font-size: 16px;
     line-height: 20.42px;
@@ -1035,9 +1036,9 @@ footer .right input:hover {
         height: 210px;
     }
 
-    .testimonial {
-        /* height: 210px; */
-    }
+    /* .testimonial {
+        height: 210px;
+    } */
 
     .testimonial .image {
         height: 57px;

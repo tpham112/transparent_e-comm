@@ -33,9 +33,20 @@ const fillClients = (clients) => {
     }
 }
 
+const fillServices = (services) => {
+    for (let i = 0; i < services.length; i++) {
+        const headlineHTML = prismic.asHTML(services[i].services_headline)
+        const listHTML = prismic.asHTML(services[i].services_details)
+        const headlineContainer = document.getElementById(`services-headline-container-${i}`)
+        const listContainer = document.getElementById(`services-list-container-${i}`)
+        headlineContainer.innerHTML = headlineHTML
+        listContainer.innerHTML = listHTML
+    }
+}
+
 const init = async () => {
     const prismicDoc = await client.getByUID('homepage', 'homepage') // custom type (name) and uid (api id)?
-    const { banner, headline, tagline, subtagline, testimonials, clients } = prismicDoc.data // title and description could be different
+    const { banner, headline, tagline, subtagline, testimonials, clients, services } = prismicDoc.data // title and description could be different
 
     const bannerHTML = prismic.asHTML(banner)
     const bannerContainer = document.getElementById('banner-container')
@@ -56,6 +67,8 @@ const init = async () => {
     fillTestimonials(testimonials)
 
     fillClients(clients)
+
+    fillServices(services)
 
     // const nameHTML = prismic.asHTML(testimonials[0].name)
     // const slidesContainer = document.getElementById('slides-container')
