@@ -8,8 +8,10 @@
     <script src="https://kit.fontawesome.com/760f168897.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <title>Transparent E-Comm</title>
+    <script src="js/prismic.js" type="module"></script>
 </head>
 <body>
+    <div id="container"></div>
     <!-- Scroll To Top Button -->
     <div class="scroll-button">
         <a href="#navbar"><i class="fas fa-arrow-up"></i></a>
@@ -45,7 +47,7 @@
     <!-- Banner Section-->
     <section class="banner">
         <div class="banner-content">
-            <div class="banner-text">Ad Platform Compliance Expertise For Health And Wellness Companies.</div>
+            <div id="banner-container" class="banner-text">Ad Platform Compliance Expertise For Health And Wellness Companies.</div>
         </div>
     </section>
 
@@ -53,9 +55,9 @@
     <section class="home" id="home">
         <div class="home-content">
             <div class="text">
-                <div class="text-one"><h1>Frustrated Trying To Find Digital Advertising Options?</h1></div>
-                <div class="text-two"><body>Our digital agency offers full service and self service options on Meta, Snapchat, Google, TikTok, and Programmatic platforms. We offer simple pricing or custom packages to meet your business needs. Ask about our free compliance deck for Meta ads.</body></div>
-                <div class="text-three"><h4>Oh and it’s free for the first 30 days!</h4></div>
+                <div id="headline-container" class="text-one"><h1>Frustrated Trying To Find Digital Advertising Options?</h1></div>
+                <div id="tagline-container" class="text-two"><body>Our digital agency offers full service and self service options on Meta, Snapchat, Google, TikTok, and Programmatic platforms. We offer simple pricing or custom packages to meet your business needs. Ask about our free compliance deck for Meta ads.</body></div>
+                <div id="subtagline-container" class="text-three"><h4>Oh and it’s free for the first 30 days!</h4></div>
             </div>
             <form action="" name="contact" method="POST" netlify>
                 <div class="buttons">
@@ -71,77 +73,46 @@
     <!-- Client Testimonies Section -->
     <section class="container">
         <div class="testimonial mySwiper">
-          <div class="testi-content swiper-wrapper">
+          <div id="slides-container" class="testi-content swiper-wrapper">
 
             <div class="slide swiper-slide">
               <!-- <img src="images/client_pic-2.jpeg" alt="" class="image" /> -->
               <div class="details">
-                <span class="name">Mike Lee</span>
-                <span class="job">CEO, Soul CBD</span>
+                <span id="name-container-0" class="name"></span>
+                <span id="job-container-0" class="job"></span>
               </div>
-              <p>
-                Our relationship with Transparent eCom went from consulting to utilizing their full-service marketing team in just a quarter. They are a great digital agency, but what sets them apart is their focus on business performance, not marketing performance. They have been a vital part of our 76% growth!
-              </p>
-              <p>
-                We struggled to run ads on Facebook and Instagram for over a year before meeting Cameron and his team. Now we are spending 50k+ a month with them and are trying Snapchat and TikTok.
-              </p>
-  
-              <i class="bx bxs-quote-alt-left quote-icon"></i>
-  
-              
+              <div id="quote-container-0" class="quote"></div>
+              <!-- <i class="bx bxs-quote-alt-left quote-icon"></i> -->
             </div>
 
             <div class="slide swiper-slide">
-              <!-- <img src="images/client_pic-2.jpeg" alt="" class="image" /> -->
-              <div class="details">
-                <span class="name">Brett Sandman</span>
-                <span class="job">Partner, JustCBD</span>
-              </div>
-              <p>
-                We launched our Delta8 product, and we couldn't find any places to run ads. Cameron and his team went out and found multiple ad networks that were taking Delta8 ads. They don't push you to spend money unless they can prove there is an opportunity to make you money. They consistently represented 70% are more of our revenue from marketing.</p>
-              <p>
-                We are looking at launching our CBD products with their whitelisted ad accounts. We had issues running FB ads for years, but have heard good things about Transparent eCom keeping ad accounts live.</p>
-  
-              <i class="bx bxs-quote-alt-left quote-icon"></i>
-  
-              
+                <!-- <img src="images/client_pic-2.jpeg" alt="" class="image" /> -->
+                <div class="details">
+                  <span id="name-container-1" class="name"></span>
+                  <span id="job-container-1" class="job"></span>
+                </div>
+                <div id="quote-container-1" class="quote"></div>
+                <!-- <i class="bx bxs-quote-alt-left quote-icon"></i> -->
             </div>
 
             <div class="slide swiper-slide">
-              <!-- <img src="images/client_pic-2.jpeg" alt="" class="image" /> -->
-              <div class="details">
-                <span class="name">Florence Kirley</span>
-                <span class="job">VP of Operations, GuardLab</span>
-              </div>
-              <p>
-                Transparent eCom was our third agency in three years, their sales process was straightforward and shed a light on our past experience. They are platform agnostic, which we love. We were able to test a handful of platforms, and then chose the ones that delivered revenue. 
-              </p>
-              <p>
-                If you have any compliance questions, just ask them trust me.
-              </p>
-  
-              <i class="bx bxs-quote-alt-left quote-icon"></i>
-  
-              
+                <!-- <img src="images/client_pic-2.jpeg" alt="" class="image" /> -->
+                <div class="details">
+                  <span id="name-container-2" class="name"></span>
+                  <span id="job-container-2" class="job"></span>
+                </div>
+                <div id="quote-container-2" class="quote"></div>
+                <!-- <i class="bx bxs-quote-alt-left quote-icon"></i> -->
             </div>
 
             <div class="slide swiper-slide">
-              <!-- <img src="images/client_pic-2.jpeg" alt="" class="image" /> -->
-              <div class="details">
-                <span class="name">Alex Jay</span>
-                <span class="job">CEO, Bite & Co.</span>
-              </div>
-
-              <p>
-                Transparent eCom helped us build our paid media channels from the start. They kept onboarding simple, explained everything that required explanation, and supported us in areas we didn't even know existed in paid ads. They also did not over attribute the impact of their channels, in fact, they often gave credit to email, organic, etc in reporting. 
-              </p>
-              <p>
-                I love that they build their agency around compliance. It is something that we struggled with on multiple ad platforms for a very long time.
-              </p>
-  
-              <i class="bx bxs-quote-alt-left quote-icon"></i>
-  
-              
+                <!-- <img src="images/client_pic-2.jpeg" alt="" class="image" /> -->
+                <div class="details">
+                  <span id="name-container-3" class="name"></span>
+                  <span id="job-container-3" class="job"></span>
+                </div>
+                <div id="quote-container-3" class="quote"></div>
+                <!-- <i class="bx bxs-quote-alt-left quote-icon"></i> -->
             </div>
 
           </div>
@@ -156,19 +127,8 @@
         <div class="title"><span>Clients</span></div>
         <div class="logos myClientSwiper">
           <div class="logos-content swiper-wrapper">
-
-            <div class="slide swiper-slide">
-                <img src="/client-images/soulCBD_edited.png" alt="">
-                <img src="/client-images/Charcoal.png" alt="">
-                <img src="/client-images/clearstrem.png" alt="">
-            </div>
-
-            <div class="slide swiper-slide">
-                <img src="/client-images/exhart-logo-horizontal-web.png" alt="">
-                <img src="/client-images/GuardLab_Logo_290x.png" alt="">
-                <img src="/client-images/justcbd.png" alt="">
-            </div>
-
+            <div id="clients-container-0" class="slide swiper-slide"></div>
+            <div id="clients-container-1" class="slide swiper-slide"></div>
           </div>
           <!-- <div class="swiper-button-next nav-btn"></div>
           <div class="swiper-button-prev nav-btn"></div> -->

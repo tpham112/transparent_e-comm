@@ -335,8 +335,10 @@ input:focus::placeholder {
 /* Client Testimonies Section CSS */
 
 .container {
-    height: 337px;
+    /* height: 337px; */
     width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -345,7 +347,7 @@ input:focus::placeholder {
 
 .testimonial {
     position: relative;
-    height: 337px;
+    /* height: 337px; */
     max-width: 1280px;
     width: 100%;
     padding: 30px 0;
@@ -364,15 +366,17 @@ input:focus::placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     row-gap: 12px;
     height: 98%;
     width: 100%;
 }
 
 .slide p {
-    margin-top: 30px;
+    /* margin-top: 30px; */
     width: 50%;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     font-size: 16px;
     font-weight: 400;
@@ -386,17 +390,34 @@ input:focus::placeholder {
 }
 
 .details .name {
+    display: flex;
+    justify-content: center;
     text-align: center;
     font-size: 16px;
     font-weight: 400;
     color: #FFF;
 }
 
-.details .job {
+.details .name p {
+    width: 100%;
+}
+
+.details .job p {
     text-align: center;
     font-size: 16px;
     font-weight: 700;
     color: #FFF;
+}
+
+.details .job p {
+    width: 100%;
+}
+
+.slide .quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: inherit;
 }
 
 /* Swiper Button CSS */
@@ -413,7 +434,7 @@ input:focus::placeholder {
 }
 
 .swiper-pagination {
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .swiper-pagination-bullet {
@@ -1015,7 +1036,7 @@ footer .right input:hover {
     }
 
     .testimonial {
-        height: 210px;
+        /* height: 210px; */
     }
 
     .testimonial .image {
@@ -1028,6 +1049,10 @@ footer .right input:hover {
 
     .testimonial .slide {
         row-gap: 5px;
+    }
+
+    .slide .quote {
+        row-gap: inherit;
     }
 
     .slide p {
@@ -1329,6 +1354,10 @@ footer .right input:hover {
 
     .testimonial .slide {
         row-gap: 5px;
+    }
+
+    .slide .quote {
+        row-gap: inherit;
     }
 
     .slide p {

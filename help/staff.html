@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='random.js'></script>
+</head>
+<body>
+    <header>
+        <h1>Thien Pham</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="order.html">Order</a>
+        <a href="staff.html">Our Staff</a>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>Our Staff</h2>
+
+            <article class="staffArticle">
+                <p>
+                    This page allows a user to click between two buttons to 
+                    load a random person with data from an API call into the table below.
+                </p>
+                <p>You can load their information <button id="fromBrowser">From The Browser</button> or <button id="fromServer">From The Express Server</button></p>
+                <table id="staffTable">
+                    <caption>Staff Information</caption>
+                    <thead>
+                        <tr>
+                            <th>Portrait</th>
+                            <th>Name/Email</th>
+                            <th>Telephone</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                    <tbody id="generatedUser">
+
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+        &copy; 2023 Thien Pham, Inc.
+    </footer>  
+</body>
+</html>
