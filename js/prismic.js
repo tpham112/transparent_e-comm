@@ -3,6 +3,7 @@ import * as prismic from 'https://cdn.skypack.dev/@prismicio/client'
 const repositoryName = 'livetransparent'
 const routes = [
     { type: 'homepage', path: '/'},
+    { type: 'clients_page', path: '/clients.html'},
 ]
 const client = prismic.createClient(repositoryName, { routes })
 
@@ -39,17 +40,18 @@ const fillTestimonials = (testimonials) => {
     }
 }
 
-
 const fillClients = (clients) => {
     for (let i = 0; i < clients.length; i++) {
         const logo1Src = prismic.asImageSrc(clients[i].logo_1)
         const logo2Src = prismic.asImageSrc(clients[i].logo_2)
         const logo3Src = prismic.asImageSrc(clients[i].logo_3)
-        const clientsContainer = document.getElementById(`clients-container-${i}`)
+        const clientsContainer = document.getElementById(`clients-container`)
         clientsContainer.innerHTML += 
-            `<img src="${logo1Src}" alt="${clients[i].logo_1.alt}">
-            <img src="${logo2Src}" alt="${clients[i].logo_2.alt}">
-            <img src="${logo3Src}" alt="${clients[i].logo_3.alt}">`
+            `<div id="clients-container-0" class="slide swiper-slide">
+                <img src="${logo1Src}" alt="${clients[i].logo_1.alt}">
+                <img src="${logo2Src}" alt="${clients[i].logo_2.alt}">
+                <img src="${logo3Src}" alt="${clients[i].logo_3.alt}">
+            </div>`
     }
 }
 
@@ -64,9 +66,19 @@ const fillServices = (services) => {
     }
 }
 
+// const fillClientMedia = (clients_media) => {
+//     for (let i = 0; i < clients_media.length; i++) {
+//         const nameHTML = prismic.asHTML(clients_media[i].client_name)
+//         const mediaOneTitleHTML = prismic.asHTML(clients_media[i].client_media_title_1)
+//         const mediaOneLink = prismic.asLink(clients_media[i].client_media)
+//     }
+// }
+
 const init = async () => {
-    const prismicDoc = await client.getByUID('homepage', 'homepage') // custom type (name) and uid (api id)?
-    const { banner, headline, tagline, subtagline, testimonials, clients, services, contact_email, contact_number } = prismicDoc.data // title and description could be different
+    const homepageDoc = await client.getSingle('homepage')
+    const clientsPageDoc = await client.getSingle('clients_page')
+    const { banner, headline, tagline, subtagline, testimonials, clients, services, contact_email, contact_number } = homepageDoc.data
+    const { clients_media } = clientsPageDoc.data
 
     const bannerHTML = prismic.asHTML(banner)
     const bannerContainer = document.getElementById('banner-container')
@@ -97,6 +109,8 @@ const init = async () => {
     const contactNumberHTML = contact_number[0].text
     const contactNumberContainer = document.getElementById('contact-number-container')
     contactNumberContainer.innerHTML = `<a href="tel: ${contactNumberHTML}">${contactNumberHTML}</a>`
+
+    // fillClientMedia(clients_media)
 }
 
 init()

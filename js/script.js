@@ -44,7 +44,7 @@ for (let i = 0; i < navLinks.length; i++) {
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
-    loop: true,
+    loop: false,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -58,7 +58,7 @@ var swiper = new Swiper(".mySwiper", {
 var swiper = new Swiper(".myClientSwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
-    loop: true,
+    loop: false,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
