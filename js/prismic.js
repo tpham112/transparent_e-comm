@@ -2,24 +2,10 @@ import * as prismic from 'https://cdn.skypack.dev/@prismicio/client'
 
 const repositoryName = 'livetransparent'
 const routes = [
-    { type: 'homepage', path: '/'},
-    { type: 'clients_page', path: '/clients.html'},
+    { type: 'homepage', uid: 'homepage', path: '/index.html'},
+    { type: 'clients_page', uid: 'clients_page', path: '/clients.html'},
 ]
 const client = prismic.createClient(repositoryName, { routes })
-
-// const fillTestimonials = (testimonials) => {
-//     for (let i = 0; i < testimonials.length; i++) {
-//         const nameHTML = prismic.asHTML(testimonials[i].name)
-//         const jobHTML = prismic.asHTML(testimonials[i].job)
-//         const quoteHTML = prismic.asHTML(testimonials[i].quote)
-//         const nameContainer = document.getElementById(`name-container-${i}`)
-//         const jobContainer = document.getElementById(`job-container-${i}`)
-//         const quoteContainer = document.getElementById(`quote-container-${i}`)
-//         nameContainer.innerHTML = nameHTML
-//         jobContainer.innerHTML = jobHTML
-//         quoteContainer.innerHTML = quoteHTML
-//     }
-// }
 
 const fillTestimonials = (testimonials) => {
     for (let i = 0; i < testimonials.length; i++) {
@@ -66,51 +52,79 @@ const fillServices = (services) => {
     }
 }
 
-// const fillClientMedia = (clients_media) => {
-//     for (let i = 0; i < clients_media.length; i++) {
-//         const nameHTML = prismic.asHTML(clients_media[i].client_name)
-//         const mediaOneTitleHTML = prismic.asHTML(clients_media[i].client_media_title_1)
-//         const mediaOneLink = prismic.asLink(clients_media[i].client_media)
-//     }
-// }
+const fillClientMedia = (clients_media) => {
+    for (let i = 0; i < clients_media.length; i++) {
+        const nameHTML = prismic.asHTML(clients_media[i].client_name)
+        const media1TitleHTML = prismic.asHTML(clients_media[i].client_media_title_1)
+        const media1Link = prismic.asLink(clients_media[i].client_media_1)
+        const media2TitleHTML = prismic.asHTML(clients_media[i].client_media_title_2)
+        const media2Link = prismic.asLink(clients_media[i].client_media_2)
+        const media3TitleHTML = prismic.asHTML(clients_media[i].client_media_title_3)
+        const media3Link = prismic.asLink(clients_media[i].client_media_3)
+        const clientsMediaContainer = document.getElementById('clients-media-container')
+        clientsMediaContainer.innerHTML += 
+            `<div class="client">
+                <h3>${nameHTML}</h3>
+                <div class="videos">
+                    <div class="video">
+                        <h4>${media1TitleHTML}</h4>
+                    </div>
+                    <div class="video">
+                        <h4>${media2TitleHTML}</h4>
+                    </div>
+                    <div class="video">
+                        <h4>${media3TitleHTML}</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <hr size="2" width="100%" color="#1544C1">`
+    }
+}
 
 const init = async () => {
+    const pathname = window.location.pathname
     const homepageDoc = await client.getSingle('homepage')
     const clientsPageDoc = await client.getSingle('clients_page')
     const { banner, headline, tagline, subtagline, testimonials, clients, services, contact_email, contact_number } = homepageDoc.data
     const { clients_media } = clientsPageDoc.data
 
-    const bannerHTML = prismic.asHTML(banner)
-    const bannerContainer = document.getElementById('banner-container')
-    bannerContainer.innerHTML = bannerHTML
+    console.log(pathname)
 
-    const headlineHTML = prismic.asHTML(headline)
-    const headlineContainer = document.getElementById('headline-container')
-    headlineContainer.innerHTML = headlineHTML
+    if (pathname == '/index.html') {
+        const bannerHTML = prismic.asHTML(banner)
+        const bannerContainer = document.getElementById('banner-container')
+        bannerContainer.innerHTML = bannerHTML
 
-    const taglineHTML = prismic.asHTML(tagline)
-    const taglineContainer = document.getElementById('tagline-container')
-    taglineContainer.innerHTML = taglineHTML
+        const headlineHTML = prismic.asHTML(headline)
+        const headlineContainer = document.getElementById('headline-container')
+        headlineContainer.innerHTML = headlineHTML
 
-    const subtaglineHTML = prismic.asHTML(subtagline)
-    const subtaglineContainer = document.getElementById('subtagline-container')
-    subtaglineContainer.innerHTML = subtaglineHTML
+        const taglineHTML = prismic.asHTML(tagline)
+        const taglineContainer = document.getElementById('tagline-container')
+        taglineContainer.innerHTML = taglineHTML
 
-    fillTestimonials(testimonials)
+        const subtaglineHTML = prismic.asHTML(subtagline)
+        const subtaglineContainer = document.getElementById('subtagline-container')
+        subtaglineContainer.innerHTML = subtaglineHTML
 
-    fillClients(clients)
+        fillTestimonials(testimonials)
 
-    fillServices(services)
+        fillClients(clients)
 
-    const contactEmailHTML = prismic.asHTML(contact_email)
-    const contactEmailContainer = document.getElementById('contact-email-container')
-    contactEmailContainer.innerHTML = contactEmailHTML
+        fillServices(services)
 
-    const contactNumberHTML = contact_number[0].text
-    const contactNumberContainer = document.getElementById('contact-number-container')
-    contactNumberContainer.innerHTML = `<a href="tel: ${contactNumberHTML}">${contactNumberHTML}</a>`
+        const contactEmailHTML = prismic.asHTML(contact_email)
+        const contactEmailContainer = document.getElementById('contact-email-container')
+        contactEmailContainer.innerHTML = contactEmailHTML
 
-    // fillClientMedia(clients_media)
+        const contactNumberHTML = contact_number[0].text
+        const contactNumberContainer = document.getElementById('contact-number-container')
+        contactNumberContainer.innerHTML = `<a href="tel: ${contactNumberHTML}">${contactNumberHTML}</a>`
+    } else if (pathname == '/clients.html') {
+        console.log(clients_media)
+        fillClientMedia(clients_media)
+    }
 }
 
 init()
