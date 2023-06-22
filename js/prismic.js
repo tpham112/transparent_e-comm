@@ -61,19 +61,34 @@ const fillClientMedia = (clients_media) => {
         const media2Link = prismic.asLink(clients_media[i].client_media_2)
         const media3TitleHTML = prismic.asHTML(clients_media[i].client_media_title_3)
         const media3Link = prismic.asLink(clients_media[i].client_media_3)
+        const media4TitleHTML = prismic.asHTML(clients_media[i].client_media_title_4)
+        const media4Link = prismic.asLink(clients_media[i].client_media_4)
+        const media5TitleHTML = prismic.asHTML(clients_media[i].client_media_title_5)
+        const media5Link = prismic.asLink(clients_media[i].client_media_5)
+        const media6TitleHTML = prismic.asHTML(clients_media[i].client_media_title_6)
+        const media6Link = prismic.asLink(clients_media[i].client_media_6)
         const clientsMediaContainer = document.getElementById('clients-media-container')
         clientsMediaContainer.innerHTML += 
             `<div class="client">
                 <h3>${nameHTML}</h3>
                 <div class="videos">
                     <div class="video">
-                        <h4>${media1TitleHTML}</h4>
+                        ${media1TitleHTML}
                     </div>
                     <div class="video">
-                        <h4>${media2TitleHTML}</h4>
+                        ${media2TitleHTML}
                     </div>
                     <div class="video">
-                        <h4>${media3TitleHTML}</h4>
+                        ${media3TitleHTML}
+                    </div>
+                    <div class="video">
+                        ${media4TitleHTML}
+                    </div>
+                    <div class="video">
+                        ${media5TitleHTML}
+                    </div>
+                    <div class="video">
+                        ${media6TitleHTML}
                     </div>
                 </div>
             </div>
