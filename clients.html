@@ -19,16 +19,13 @@
     <nav>
         <div class="navbar" id="navbar">
             <div class="logo-box">
-                <div class="logo"><a href="#home">Transparent E-Comm</a></div>
+                <div class="logo"><a href="/"><img src="./images/logo.png"/></a></div>
             </div>
             <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#clients">Clients</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li class="button">
-                    <a href="tel: 7144696406"><button>Click-To-Call</button></a>
-                </li>
+                <li><a href="/#clients">Clients</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#contact">Contact</a></li>
+                <li><a href="clients.html">Creative</a></li>
                 <div class="cancel-button">
                     <i class="fas fa-times"></i>
                 </div>
@@ -43,18 +40,15 @@
     </nav>
 
     <!-- Banner Section-->
-    <section class="banner">
+    <!-- <section class="banner">
         <div class="banner-content">
             <div class="banner-text">Ad Platform Compliance Expertise For Health And Wellness Companies.</div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Our Clients Section -->
     <section class="our-clients">
-        <h1 id="clients-media-container">Our Clients</h1>
-
-
-
+        <div id="clients-media-container" scrolls></div>
     </section>
 
     <!-- Footer Section -->
@@ -64,32 +58,34 @@
                 <div class="title"><h2>Contact</h4></div>
                 <div class="line"><hr size="1" width="100%" color="#FFF">  </div>
                 <div class="contact-info">
-                    <h4><a href="mailto: cameron@livetransparent.com">cameron@livetransparent.com</a></h4>
-                    <h4><a href="tel: 7144696406">714-469-6406</a></h4>
+                    <h4 id="contact-email-container"></h4>
+                    <h4 id="contact-number-container"></h4>
                 </div>
             </div>
             <div class="footer-logo">
-                <img src="images/Transparent.png" alt="transparent logo">
-            </div>           
-            <div class="message">
-                <div class="left">
-                    <form action="">
-                        <label for="fname">Name*</label><br>
-                        <input style="width: 197px" type="text" id="fname" name="fname"><br><br>
-                        <label for="femail">E-mail*</label><br>
-                        <input style="width: 197px" type="email" id="femail" name="femail"><br><br>
-                        <label for="fphone">Phone*</label><br>
-                        <input style="width: 197px" type="tel" id="fphone" name="fphone"><br><br>
-                    </form>
-                </div>
-                <div class="right">
-                    <form action="">
-                        <label for="fmessage">Message*</label><br>
-                        <textarea id="fmessage" name="fmessage" rows="8" cols="60"></textarea><br><br>
-                    </form>
-                    <input type="submit" value="Submit">
-                </div>
+                <img src="images/logo.png" alt="transparent logo">
             </div>
+            <form action="" name="fcontact" method="POST" netlify>
+                <div class="message">
+                    <div class="left">
+                        <div>
+                            <label for="fname">Name*</label><br>
+                            <input style="width: 197px" type="text" id="fname" name="fname"><br><br>
+                            <label for="femail">E-mail*</label><br>
+                            <input style="width: 197px" type="email" id="femail" name="femail"><br><br>
+                            <label for="fphone">Phone*</label><br>
+                            <input style="width: 197px" type="tel" id="fphone" name="fphone"><br><br>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div>
+                            <label for="fmessage">Message*</label><br>
+                            <textarea id="fmessage" name="fmessage" rows="9" cols="60"></textarea><br><br>
+                        </div>
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
+            </form>
         </div>
     </footer>
 
@@ -101,5 +97,8 @@
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+
+    <!-- Fadein stuff -->
+    <script src="js/scrolls.min.js"></script>
 </body>
 </html>

@@ -17,19 +17,16 @@
     </div>
 
     <!-- Navigation Menu -->
-    <nav>
+    <nav class="home-nav">
         <div class="navbar" id="navbar">
             <div class="logo-box">
-                <div class="logo"><a href="#home">Transparent E-Comm</a></div>
+                <div class="logo"><a href="/"><img src="./images/logo.png"/></a></div>
             </div>
             <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="clients.html">Clients</a></li>
+                <li><a href="#clients">Clients</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li class="button">
-                    <a href="tel: 7144696406"><button>Click-To-Call</button></a>
-                </li>
+                <li><a href="clients.html">Creative</a></li>
                 <div class="cancel-button">
                     <i class="fas fa-times"></i>
                 </div>
@@ -44,34 +41,76 @@
     </nav>
 
     <!-- Banner Section-->
-    <section class="banner">
+    <!-- <section class="banner">
         <div class="banner-content">
             <div id="banner-container" class="banner-text">Ad Platform Compliance Expertise For Health And Wellness Companies.</div>
+        </div>
+    </section> -->
+
+    <section class="masthead">
+        <div class="masthead--inner" id="masthead-content">
+        <h1 id="masthead-title">
+            <span class="headline-1"></span>
+            <span class="headline-2"></span>
+            <span class="headline-3"></span>
+        </h1>
+        <div class="masthead--bottom-text">
+            <p id="subtext-1"></p>
+            <p id="subtext-2"></p>
+        </div>
+        </div>
+    </section>
+
+    <section class="pdf-slider">
+        <div class="pdfSwiper swiper" scrolls>
+            <div class="swiper-wrapper" id="pdf-slider">
+                
+            </div>
+            <div class="swiper-button-next nav-btn"></div>
+            <div class="swiper-button-prev nav-btn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <div class="download-overlay" id="download-overlay">
+        <div class="overlay-inner">
+            <button id="close-overlay">
+                
+            </button>
+            <p>Please enter your name and email to download this PDF</p>
+            <form name="pdfForm" method="POST" netlify id="pdf-form">
+                <label>Name</label>
+                <input type="text" name="Name" id="pdf-name"/>
+                <label>Email</label>
+                <input type="email" name="Email" id="pdf-email"/>
+                <button disabled id="pdf-button" type="submit">Download PDF</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="glance" id="glance-section" scrolls>
+        <p class="heading">TRANSPARENT at a glance:</p>
+        <div class="stats">
+            <p id="brand-section"><span class="number" id="brand-number"></span> <span class="description">brands</span></p>
+            <p id="ad-section"><span class="number" id="ad-spend"></span> <span class="description">million dollars of ad spend</span></p>
+            <p><span class="number">0</span> <span class="description">platform bans<span></span></p>
         </div>
     </section>
 
     <!-- Home Section -->
     <section class="home" id="home">
         <div class="home-content">
-            <div class="text">
-                <div id="headline-container" class="text-one"><h1>Frustrated Trying To Find Digital Advertising Options?</h1></div>
-                <div id="tagline-container" class="text-two"><body>Our digital agency offers full service and self service options on Meta, Snapchat, Google, TikTok, and Programmatic platforms. We offer simple pricing or custom packages to meet your business needs. Ask about our free compliance deck for Meta ads.</body></div>
-                <div id="subtagline-container" class="text-three"><h4>Oh and it’s free for the first 30 days!</h4></div>
+            <div class="text scrolls" scrolls>
+                <div id="headline-container" class="text-one"></div>
+                <div id="tagline-container" class="text-two"></div>
+                <div id="subtagline-container" class="text-three"></div>
             </div>
-            <form action="" name="contact" method="POST" netlify>
-                <div class="buttons">
-                    <input type="text" name="name" id="name" placeholder="Name">
-                    <input type="email" name="email" id="email" placeholder="E-Mail">
-                    <input type="phone" name="phone" id="phone" placeholder="Phone">
-                    <div class="get-started"><input type="submit" value="Get Started"></div>
-                </div>
-            </form>
         </div>
     </section>
 
     <!-- Client Testimonies Section -->
-    <section class="container">
-        <div class="testimonial mySwiper">
+    <section class="container testimonial-container">
+        <div class="testimonial mySwiper" scrolls>
           <div id="slides-container" class="testi-content swiper-wrapper"></div>
           <div class="swiper-button-next nav-btn"></div>
           <div class="swiper-button-prev nav-btn"></div>
@@ -80,7 +119,7 @@
       </section>
 
     <!-- Client Logos Carousel -->
-    <section class="logos-container" id="clients">
+    <section class="logos-container" id="clients" scrolls>
         <div class="title"><span>Clients</span></div>
         <div class="logos myClientSwiper">
           <div id="clients-container" class="logos-content swiper-wrapper">
@@ -108,36 +147,8 @@
 
     <!-- Services Section -->
     <section class="services" id="services">
-        <div class="content">
-            <div class="boxes">
-                <div class="box">
-                    <div class="text">
-                        <div id="services-headline-container-0" class="topic"><h3></h3></div>
-                        <ul id="services-list-container-0"></ul>
-                    </div>
-                    <div class="pictures">
-                        <img src="images/laptop-2.jpeg" alt="laptop">
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="text">
-                        <div id="services-headline-container-1" class="topic"><h3></h3></div>
-                        <ul id="services-list-container-1"></ul>
-                    </div>
-                    <div class="pictures">
-                        <img src="images/meeting-2.jpeg" alt="meeting">
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="text">
-                        <div id="services-headline-container-2" class="topic"><h3></h3></div>
-                        <ul id="services-list-container-2"></ul>
-                    </div>
-                    <div class="pictures">
-                        <img src="images/collab-2.jpeg" alt="collaboration">
-                    </div>
-                </div>
-            </div>
+        <div class="content" scrolls>
+            <ul id="services-container"></ul>
         </div>
     </section>
 
@@ -153,7 +164,7 @@
                 </div>
             </div>
             <div class="footer-logo">
-                <img src="images/Transparent.png" alt="transparent logo">
+                <img src="images/logo.png" alt="transparent logo">
             </div>
             <form action="" name="fcontact" method="POST" netlify>
                 <div class="message">
@@ -186,6 +197,9 @@
     <script src="js/swiper-bundle.min.js"></script>
 
     <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js" type="module"></script>
+
+    <!-- Fadein stuff -->
+    <script src="js/scrolls.min.js"></script>
 </body>
 </html>
