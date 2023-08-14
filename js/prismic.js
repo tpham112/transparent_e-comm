@@ -321,7 +321,7 @@ const init = async () => {
       'contact-number-container'
     );
     contactNumberContainer.innerHTML = `<a href="tel: ${contactNumberHTML}">${contactNumberHTML}</a>`;
-  } else if (pathname == '/clients.html') {
+  } else if (pathname == '/clients.html' || pathname == '/clients') {
     console.log(clients_media);
     fillClientMedia(clients_media);
   }

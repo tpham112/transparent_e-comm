@@ -453,12 +453,8 @@ input:focus::placeholder {
   margin-bottom: 10px;
 }
 
-.swiper-pagination-bullet {
-  background-color: #ede8e8 !important;
-}
-
 .swiper-pagination-bullet-active {
-  background-color: #fff !important;
+  background-color: gray !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -474,11 +470,12 @@ input:focus::placeholder {
 .logos-container {
   margin: 100px 0;
   width: 100%;
-  background: #000;
+  background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 30px;
 }
 
 .logos-container .title {
@@ -491,7 +488,7 @@ input:focus::placeholder {
   font-size: 32px;
   font-weight: 700px;
   line-height: 40.83px;
-  color: #fff;
+  color: #000;
   position: relative;
 }
 
@@ -1510,6 +1507,11 @@ footer .right input:hover {
   .logos-container {
     padding-top: 22px;
     padding-bottom: 0;
+    background: white;
+  }
+
+  .logos-container .title {
+    color: black;
   }
 
   .logos-container .title span {
