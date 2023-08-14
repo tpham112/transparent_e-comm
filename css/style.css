@@ -783,6 +783,20 @@ footer .content {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 980px) {
+  footer .content {
+    flex-direction: column;
+  }
+
+  footer .message {
+    flex-direction: column;
+  }
+
+  footer textarea {
+    width: 100%;
+  }
+}
+
 footer h2,
 h4 {
   color: #fff;
@@ -895,26 +909,12 @@ footer .right input:hover {
 }
 
 /* Laptops/Desktops */
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 768px) {
   /* Services Section */
-  .services {
-    padding-top: 33px;
-  }
-
-  .services .boxes .box {
-    width: 300px;
-  }
 
   .services li {
     font-size: 14px;
-  }
-
-  footer .message {
-    display: none;
-  }
-
-  footer img {
-    display: none;
+    line-height: 20px;
   }
 }
 
