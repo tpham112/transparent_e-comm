@@ -1,4 +1,4 @@
-import { CountUp } from '../node_modules/countup.js/dist/countUp.min.js';
+import { CountUp } from './countup.min.js';
 
 // Side Navigation JS Code //
 let menuButton = document.querySelector('.menu-button');
