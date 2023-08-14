@@ -10,25 +10,23 @@
     <title>Transparent E-Comm</title>
 </head>
 <body>
+    <div id="container"></div>
     <!-- Scroll To Top Button -->
     <div class="scroll-button">
         <a href="#navbar"><i class="fas fa-arrow-up"></i></a>
     </div>
 
     <!-- Navigation Menu -->
-    <nav>
+    <nav class="home-nav">
         <div class="navbar" id="navbar">
             <div class="logo-box">
-                <div class="logo"><a href="#home">Transparent E-Comm</a></div>
+                <div class="logo"><a href="/"><img src="./images/logo.png"/></a></div>
             </div>
             <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="clients.html">Clients</a></li>
+                <li><a href="#clients">Clients</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li class="button">
-                    <button href="tel: 7144696406">Click-To-Call</button>
-                </li>
+                <li><a href="clients.html">Creative</a></li>
                 <div class="cancel-button">
                     <i class="fas fa-times"></i>
                 </div>
@@ -42,109 +40,71 @@
         </div>
     </nav>
 
-    <!-- Banner Section-->
-    <section class="banner">
-        <div class="banner-content">
-            <div class="banner-text">Ad Platform Compliance Expertise For Health And Wellness Companies.</div>
+    <section class="masthead">
+        <div class="masthead--inner" id="masthead-content">
+        <h1 id="masthead-title">
+            <span class="headline-1"></span>
+            <span class="headline-2"></span>
+            <span class="headline-3"></span>
+        </h1>
+        <div class="masthead--bottom-text">
+            <p id="subtext-1"></p>
+            <p id="subtext-2"></p>
+        </div>
+        </div>
+    </section>
+
+    <section class="pdf-slider">
+        <div class="pdfSwiper swiper" scrolls>
+            <div class="swiper-wrapper" id="pdf-slider">
+                
+            </div>
+            <div class="swiper-button-next nav-btn"></div>
+            <div class="swiper-button-prev nav-btn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <div class="download-overlay" id="download-overlay">
+        <div class="overlay-inner">
+            <button id="close-overlay">
+                
+            </button>
+            <p>Please enter your name and email to download this PDF</p>
+            <form name="pdfForm" method="POST" netlify id="pdf-form">
+                <label>Name</label>
+                <input type="text" name="Name" id="pdf-name"/>
+                <label>Email</label>
+                <input type="email" name="Email" id="pdf-email"/>
+                <button disabled id="pdf-button" type="submit">Download PDF</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="glance" id="glance-section" scrolls>
+        <p class="heading">TRANSPARENT at a glance:</p>
+        <div class="stats">
+            <p id="brand-section"><span class="number" id="brand-number"></span> <span class="description">brands</span></p>
+            <p id="ad-section"><span class="number" id="ad-spend"></span> <span class="description">million dollars of ad spend</span></p>
+            <p><span class="number">0</span> <span class="description">platform bans<span></span></p>
         </div>
     </section>
 
     <!-- Home Section -->
     <section class="home" id="home">
         <div class="home-content">
-            <div class="text">
-                <div class="text-one"><h1>Frustrated Trying To Find Digital Advertising Options?</h1></div>
-                <div class="text-two"><body>Our digital agency offers full service and self service options on Meta, Snapchat, Google, TikTok, and Programmatic platforms. We offer simple pricing or custom packages to meet your business needs. Ask about our free compliance deck for Meta ads.</body></div>
-                <div class="text-three"><h4>Oh and it’s free for the first 30 days!</h4></div>
+            <div class="text scrolls" scrolls>
+                <div id="headline-container" class="text-one"></div>
+                <div id="tagline-container" class="text-two"></div>
+                <div id="subtagline-container" class="text-three"></div>
             </div>
-            <form action="" name="contact" method="POST" netlify>
-                <div class="buttons">
-                    <input type="text" name="name" id="name" placeholder="Name">
-                    <input type="email" name="email" id="email" placeholder="E-Mail">
-                    <input type="phone" name="phone" id="phone" placeholder="Phone">
-                    <div class="get-started"><input type="submit" value="Get Started"></div>
-                </div>
-            </form>
         </div>
     </section>
 
     <!-- Client Testimonies Section -->
-    <section class="container">
-        <div class="testimonial mySwiper">
-          <div class="testi-content swiper-wrapper">
-
-            <div class="slide swiper-slide">
-              <!-- <img src="images/client_pic-2.jpeg" alt="" class="image" /> -->
-              <div class="details">
-                <span class="name">Mike Lee</span>
-                <span class="job">CEO, Soul CBD</span>
-              </div>
-              <p>
-                Our relationship with Transparent eCom went from consulting to utilizing their full-service marketing team in just a quarter. They are a great digital agency, but what sets them apart is their focus on business performance, not marketing performance. They have been a vital part of our 76% growth!
-              </p>
-              <p>
-                We struggled to run ads on Facebook and Instagram for over a year before meeting Cameron and his team. Now we are spending 50k+ a month with them and are trying Snapchat and TikTok.
-              </p>
-  
-              <i class="bx bxs-quote-alt-left quote-icon"></i>
-  
-              
-            </div>
-
-            <div class="slide swiper-slide">
-              <!-- <img src="images/client_pic-2.jpeg" alt="" class="image" /> -->
-              <div class="details">
-                <span class="name">Brett Sandman</span>
-                <span class="job">Partner, JustCBD</span>
-              </div>
-              <p>
-                We launched our Delta8 product, and we couldn't find any places to run ads. Cameron and his team went out and found multiple ad networks that were taking Delta8 ads. They don't push you to spend money unless they can prove there is an opportunity to make you money. They consistently represented 70% are more of our revenue from marketing.</p>
-              <p>
-                We are looking at launching our CBD products with their whitelisted ad accounts. We had issues running FB ads for years, but have heard good things about Transparent eCom keeping ad accounts live.</p>
-  
-              <i class="bx bxs-quote-alt-left quote-icon"></i>
-  
-              
-            </div>
-
-            <div class="slide swiper-slide">
-              <!-- <img src="images/client_pic-2.jpeg" alt="" class="image" /> -->
-              <div class="details">
-                <span class="name">Florence Kirley</span>
-                <span class="job">VP of Operations, GuardLab</span>
-              </div>
-              <p>
-                Transparent eCom was our third agency in three years, their sales process was straightforward and shed a light on our past experience. They are platform agnostic, which we love. We were able to test a handful of platforms, and then chose the ones that delivered revenue. 
-              </p>
-              <p>
-                If you have any compliance questions, just ask them trust me.
-              </p>
-  
-              <i class="bx bxs-quote-alt-left quote-icon"></i>
-  
-              
-            </div>
-
-            <div class="slide swiper-slide">
-              <!-- <img src="images/client_pic-2.jpeg" alt="" class="image" /> -->
-              <div class="details">
-                <span class="name">Alex Jay</span>
-                <span class="job">CEO, Bite & Co.</span>
-              </div>
-
-              <p>
-                Transparent eCom helped us build our paid media channels from the start. They kept onboarding simple, explained everything that required explanation, and supported us in areas we didn't even know existed in paid ads. They also did not over attribute the impact of their channels, in fact, they often gave credit to email, organic, etc in reporting. 
-              </p>
-              <p>
-                I love that they build their agency around compliance. It is something that we struggled with on multiple ad platforms for a very long time.
-              </p>
-  
-              <i class="bx bxs-quote-alt-left quote-icon"></i>
-  
-              
-            </div>
-
-          </div>
+    <section class="container testimonial-container">
+        <div class="testimonial mySwiper" scrolls>
+          <div id="slides-container" class="testi-content swiper-wrapper"></div>
           <div class="swiper-button-next nav-btn"></div>
           <div class="swiper-button-prev nav-btn"></div>
           <div class="swiper-pagination"></div>
@@ -152,23 +112,12 @@
       </section>
 
     <!-- Client Logos Carousel -->
-    <section class="logos-container" id="clients">
+    <section class="logos-container" id="clients" scrolls>
         <div class="title"><span>Clients</span></div>
         <div class="logos myClientSwiper">
-          <div class="logos-content swiper-wrapper">
-
-            <div class="slide swiper-slide">
-                <img src="/client-images/soulCBD_edited.png" alt="">
-                <img src="/client-images/Charcoal.png" alt="">
-                <img src="/client-images/clearstrem.png" alt="">
-            </div>
-
-            <div class="slide swiper-slide">
-                <img src="/client-images/exhart-logo-horizontal-web.png" alt="">
-                <img src="/client-images/GuardLab_Logo_290x.png" alt="">
-                <img src="/client-images/justcbd.png" alt="">
-            </div>
-
+          <div id="clients-container" class="logos-content swiper-wrapper">
+            <!-- <div id="clients-container-0" class="slide swiper-slide"></div>
+            <div id="clients-container-1" class="slide swiper-slide"></div> -->
           </div>
           <!-- <div class="swiper-button-next nav-btn"></div>
           <div class="swiper-button-prev nav-btn"></div> -->
@@ -191,61 +140,8 @@
 
     <!-- Services Section -->
     <section class="services" id="services">
-        <div class="content">
-            <div class="boxes">
-                <div class="box">
-                    <div class="text">
-                        <div class="topic"><h3>Self-Service</h3></div>
-                        <p>Includes:</p>
-                        <ul>
-                            <li>One Whitelisted ad account (Meta) </li>
-                            <li>Compliance support for creative, landing pages, campaign building</li>
-                            <li>Slack and/or email support</li>
-                            <li>One monthly call </li>
-                            <li>Additional platform cost: $1,500 monthly</li>
-                        </ul>
-                    </div>
-                    <div class="pictures">
-                        <img src="images/laptop-2.jpeg" alt="laptop">
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="text">
-                        <div class="topic"><h3>Full Service</h3></div>
-                        <ul>
-                            <li>Includes self-service plus the below</li>
-                            <li>Platform options pick one: Google, Bing, Meta (FB/IG), Snapchat, The Trade Desk</li>
-                            <li>Platform and creative strategy</li>
-                            <li>3 creative concepts monthly</li>
-                            <li>Up to $500 dollars of landing page work </li>
-                            <li>One monthly call</li>
-                            <li>Slack and/or email support</li>
-                            <li>Additional platform cost: $2,500 monthly</li>
-                        </ul>
-                    </div>
-                    <div class="pictures">
-                        <img src="images/meeting-2.jpeg" alt="meeting">
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="text">
-                        <div class="topic"><h3>Hybrid Service</h3></div>
-                        <ul>
-                            <li>Includes self-service plus the below</li>
-                            <li>Platform options pick one: Google, Bing, Meta (FB/IG), Snapchat, The Trade Desk</li>
-                            <li>Platform and creative strategy</li>
-                            <li>3 creative concepts monthly</li>
-                            <li>Up to $500 dollars of landing page work </li>
-                            <li>One monthly call</li>
-                            <li>Slack and/or email support</li>
-                            <li>Additional platform cost: $2,500 monthly</li>
-                        </ul>
-                    </div>
-                    <div class="pictures">
-                        <img src="images/collab-2.jpeg" alt="collaboration">
-                    </div>
-                </div>
-            </div>
+        <div class="content" scrolls>
+            <ul id="services-container"></ul>
         </div>
     </section>
 
@@ -256,12 +152,12 @@
                 <div class="title"><h2>Contact</h4></div>
                 <div class="line"><hr size="1" width="100%" color="#FFF">  </div>
                 <div class="contact-info">
-                    <h4><a href="mailto: cameron@livetransparent.com">cameron@livetransparent.com</a></h4>
-                    <h4><a href="tel: 7144696406">714-469-6406</a></h4>
+                    <h4 id="contact-email-container"></h4>
+                    <h4 id="contact-number-container"></h4>
                 </div>
             </div>
             <div class="footer-logo">
-                <img src="images/Transparent.png" alt="transparent logo">
+                <img src="images/logo.png" alt="transparent logo">
             </div>
             <form action="" name="fcontact" method="POST" netlify>
                 <div class="message">
@@ -287,10 +183,16 @@
         </div>
     </footer>
 
+    <!-- Prismic JS -->
+    <script src="js/prismic.js" type="module"></script>
+
     <!-- Swiper JS -->
     <script src="js/swiper-bundle.min.js"></script>
 
     <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js" type="module"></script>
+
+    <!-- Fadein stuff -->
+    <script src="js/scrolls.min.js"></script>
 </body>
 </html>
