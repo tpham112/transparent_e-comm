@@ -51,12 +51,33 @@ const fillClients = (clients) => {
   }
 };
 
-const fillServices = (services) => {
+const fillFullService = (services) => {
+  for (let i = 0; i < services.length; i++) {
+    const serviceText = services[i].service[0].text;
+
+    const listContainer = document.getElementById('full-service-container');
+
+    listContainer.innerHTML += `<li>${serviceText}</li>`;
+  }
+};
+
+const fillSelfService = (services) => {
   console.log(services);
   for (let i = 0; i < services.length; i++) {
     const serviceText = services[i].service[0].text;
 
-    const listContainer = document.getElementById('services-container');
+    const listContainer = document.getElementById('self-service-container');
+
+    listContainer.innerHTML += `<li>${serviceText}</li>`;
+  }
+};
+
+const fillHybridService = (services) => {
+  console.log(services);
+  for (let i = 0; i < services.length; i++) {
+    const serviceText = services[i].service[0].text;
+
+    const listContainer = document.getElementById('hybrid-service-container');
 
     listContainer.innerHTML += `<li>${serviceText}</li>`;
   }
@@ -251,8 +272,9 @@ const init = async () => {
     subtagline,
     testimonials,
     clients,
-    services,
     services1,
+    self_service,
+    hybrid_service,
     contact_email,
     contact_number,
   } = homepageDoc.data;
@@ -306,7 +328,9 @@ const init = async () => {
     fillClients(clients);
 
     // fillServices(services);
-    fillServices(services1);
+    fillSelfService(self_service);
+    fillFullService(services1);
+    fillHybridService(hybrid_service);
 
     fillPdfSlider(pdf_slider);
 
@@ -321,7 +345,7 @@ const init = async () => {
       'contact-number-container'
     );
     contactNumberContainer.innerHTML = `<a href="tel: ${contactNumberHTML}">${contactNumberHTML}</a>`;
-  } else if (pathname == '/clients.html') {
+  } else if (pathname == '/clients.html' || pathname == '/clients') {
     console.log(clients_media);
     fillClientMedia(clients_media);
   }

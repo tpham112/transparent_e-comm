@@ -453,12 +453,8 @@ input:focus::placeholder {
   margin-bottom: 10px;
 }
 
-.swiper-pagination-bullet {
-  background-color: #ede8e8 !important;
-}
-
 .swiper-pagination-bullet-active {
-  background-color: #fff !important;
+  background-color: gray !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -474,11 +470,12 @@ input:focus::placeholder {
 .logos-container {
   margin: 100px 0;
   width: 100%;
-  background: #000;
+  background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 30px;
 }
 
 .logos-container .title {
@@ -491,7 +488,7 @@ input:focus::placeholder {
   font-size: 32px;
   font-weight: 700px;
   line-height: 40.83px;
-  color: #fff;
+  color: #000;
   position: relative;
 }
 
@@ -742,17 +739,42 @@ input:focus::placeholder {
   margin-bottom: 15px;
 }
 
+.service-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
 .services ul {
   max-width: 640px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
+  padding: 0 15px 0 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .service-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .services ul {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+}
+
+.services p {
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
 .services li {
   font-weight: 400;
-  font-size: 28px;
-  line-height: 38px;
-  list-style: none;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .services .pictures {
@@ -1510,6 +1532,11 @@ footer .right input:hover {
   .logos-container {
     padding-top: 22px;
     padding-bottom: 0;
+    background: white;
+  }
+
+  .logos-container .title {
+    color: black;
   }
 
   .logos-container .title span {
