@@ -751,7 +751,7 @@ input:focus::placeholder {
   max-width: 640px;
   margin: 0 auto;
   text-align: left;
-  padding: 0 15px 0 0;
+  padding: 0 15px 0 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -775,7 +775,6 @@ input:focus::placeholder {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  list-style: none;
 }
 
 .services .pictures {
