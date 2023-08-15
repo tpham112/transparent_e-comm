@@ -739,16 +739,42 @@ input:focus::placeholder {
   margin-bottom: 15px;
 }
 
+.service-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
 .services ul {
   max-width: 640px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
+  padding: 0 15px 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .service-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .services ul {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+}
+
+.services p {
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
 .services li {
   font-weight: 400;
-  font-size: 28px;
-  line-height: 38px;
+  font-size: 18px;
+  line-height: 28px;
   list-style: none;
 }
 
