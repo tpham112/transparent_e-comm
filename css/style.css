@@ -396,6 +396,10 @@ input:focus::placeholder {
   width: 100%;
 }
 
+#name-container-0 p {
+  width: auto;
+}
+
 .slide p {
   margin-top: 30px;
   width: 50%;
@@ -1409,7 +1413,7 @@ footer .right input:hover {
 
   .testimonial {
     /* height: 210px; */
-    padding: 100px 0px;
+    /* padding: 100px 0px; */
   }
 
   .testimonial .image {
@@ -1433,7 +1437,7 @@ footer .right input:hover {
   }
 
   .slide .details {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .slide span {
@@ -1711,11 +1715,11 @@ footer .right input:hover {
 
   /* Testimonial Section */
   .container {
-    height: 210px;
+    height: auto;
   }
 
   .testimonial {
-    height: 210px;
+    height: auto;
   }
 
   .testimonial .image {
@@ -1736,10 +1740,6 @@ footer .right input:hover {
     width: 297px;
     font-size: 12px;
     line-height: 15px;
-  }
-
-  .slide .details {
-    flex-direction: row;
   }
 
   .slide span {
