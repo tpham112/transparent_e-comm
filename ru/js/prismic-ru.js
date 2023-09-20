@@ -2,14 +2,12 @@ import * as prismic from 'https://cdn.skypack.dev/@prismicio/client';
 
 const repositoryName = 'livetransparent';
 const routes = [
-  { type: 'homepage', uid: 'homepage', path: '/index.html' },
-  { type: 'clients_page', uid: 'clients_page', path: '/clients.html' },
+  { type: 'homepage', uid: 'homepage', path: '/ru/index.html' },
+  { type: 'clients_page', uid: 'clients_page', path: '/ru/clients/index.html' },
 ];
 const client = prismic.createClient(repositoryName, { routes });
 
-const locale = navigator.language;
-
-console.log({ locale });
+console.log({ client });
 
 const fillTestimonials = (testimonials) => {
   for (let i = 0; i < testimonials.length; i++) {
@@ -226,8 +224,8 @@ const fillPdfSlider = (content) => {
 };
 
 if (
-  window.location.pathname === '/index.html' ||
-  window.location.pathname === '/'
+  window.location.pathname === '/ru/index.html' ||
+  window.location.pathname === '/ru/'
 ) {
   const validateEmail = (text) => {
     let reg = /^\w+([\.-]?\w+)*([\+][\.-]?\w+)?@\w+([\.-]?\w+)*(\.\w\w+)+$/;
@@ -262,14 +260,8 @@ if (
 
 const init = async () => {
   const pathname = window.location.pathname;
-  const homepageReference = await client.getSingle('homepage');
-  console.log({ homepageReference });
-  const homepageDoc = await client.getSingle('homepage', {
-    lang: locale,
-  });
-  const clientsPageDoc = await client.getSingle('clients_page', {
-    lang: locale,
-  });
+  const homepageDoc = await client.getSingle('homepage', { lang: 'ru' });
+  const clientsPageDoc = await client.getSingle('clients_page', { lang: 'ru' });
   const {
     primary_headline_1,
     primary_headline_2,
@@ -290,7 +282,9 @@ const init = async () => {
   } = homepageDoc.data;
   const { clients_media } = clientsPageDoc.data;
 
-  if (pathname == '/index.html' || pathname == '/') {
+  console.log({ homepageDoc });
+
+  if (pathname == '/ru/index.html' || pathname == '/ru/') {
     let stateCheck = setInterval(() => {
       if (document.readyState === 'complete') {
         clearInterval(stateCheck);
@@ -355,7 +349,7 @@ const init = async () => {
       'contact-number-container'
     );
     contactNumberContainer.innerHTML = `<a href="tel: ${contactNumberHTML}">${contactNumberHTML}</a>`;
-  } else if (pathname == '/clients.html' || pathname == '/clients') {
+  } else if (pathname == '/ru/clients.html' || pathname == '/ru/clients/') {
     console.log(clients_media);
     fillClientMedia(clients_media);
   }

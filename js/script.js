@@ -1,5 +1,6 @@
 import { CountUp } from './countup.min.js';
 
+console.log('LOAD SCRIPT');
 // Side Navigation JS Code //
 let menuButton = document.querySelector('.menu-button');
 let cancelButton = document.querySelector('.cancel-button');
