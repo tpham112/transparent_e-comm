@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/760f168897.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <title>Transparent eCom</title>
+</head>
+<body>
+    <div id="container"></div>
+    <!-- Scroll To Top Button -->
+    <div class="scroll-button">
+        <a href="#navbar"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="home-nav">
+        <div class="navbar" id="navbar">
+            <div class="logo-box">
+                <div class="logo"><a href="/"><img src="../images/logo.png"/></a></div>
+            </div>
+            <ul class="menu">
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/ru/clients">Creative</a></li>
+                <div class="cancel-button">
+                    <i class="fas fa-times"></i>
+                </div>
+            </ul>
+        </div>
+        <div class="phone-button">
+            <i class="fa-solid fa-phone"></i>
+        </div>
+        <div class="menu-button">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section class="masthead">
+        <div class="masthead--inner" id="masthead-content">
+        <h1 id="masthead-title">
+            <span class="headline-1"></span>
+            <span class="headline-2"></span>
+            <span class="headline-3"></span>
+        </h1>
+        <div class="masthead--bottom-text">
+            <p id="subtext-1"></p>
+            <p id="subtext-2"></p>
+        </div>
+        </div>
+    </section>
+
+    <section class="pdf-slider">
+        <div class="pdfSwiper swiper" scrolls>
+            <div class="swiper-wrapper" id="pdf-slider">
+                
+            </div>
+            <div class="swiper-button-next nav-btn"></div>
+            <div class="swiper-button-prev nav-btn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <div class="download-overlay" id="download-overlay">
+        <div class="overlay-inner">
+            <button id="close-overlay">
+                
+            </button>
+            <p>Please enter your name and email to download this PDF</p>
+            <form name="pdfForm" method="POST" netlify id="pdf-form">
+                <label>Name</label>
+                <input type="text" name="Name" id="pdf-name"/>
+                <label>Email</label>
+                <input type="email" name="Email" id="pdf-email"/>
+                <button disabled id="pdf-button" type="submit">Download PDF</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="glance" id="glance-section" scrolls>
+        <p class="heading">TRANSPARENT at a glance:</p>
+        <div class="stats">
+            <p id="brand-section"><span class="number" id="brand-number"></span> <span class="description">brands</span></p>
+            <p id="ad-section"><span class="number" id="ad-spend"></span> <span class="description">million dollars of ad spend</span></p>
+            <p><span class="number">0</span> <span class="description">platform bans<span></span></p>
+        </div>
+    </section>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="text scrolls" scrolls>
+                <div id="headline-container" class="text-one"></div>
+                <div id="tagline-container" class="text-two"></div>
+                <div id="subtagline-container" class="text-three"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonies Section -->
+    <section class="container testimonial-container">
+        <div class="testimonial mySwiper" scrolls>
+          <div id="slides-container" class="testi-content swiper-wrapper"></div>
+          <div class="swiper-button-next nav-btn"></div>
+          <div class="swiper-button-prev nav-btn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+    <!-- Client Logos Carousel -->
+    <section class="logos-container" id="clients" scrolls>
+        <div class="title"><span>Clients</span></div>
+        <div class="logos myClientSwiper">
+          <div id="clients-container" class="logos-content swiper-wrapper">
+            <!-- <div id="clients-container-0" class="slide swiper-slide"></div>
+            <div id="clients-container-1" class="slide swiper-slide"></div> -->
+          </div>
+          <!-- <div class="swiper-button-next nav-btn"></div>
+          <div class="swiper-button-prev nav-btn"></div> -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+    <!-- Client Logos Section -->
+    <!-- <section class="client-logos">
+        <div class="content">
+            <div class="title"><span>Clients</span></div>
+            <div class="logos">
+                <i class="fa-brands fa-aviato"></i>
+                <i class="fa-brands fa-pied-piper-alt"></i>
+                <i class="fa-brands fa-hooli"></i>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="content service-inner" scrolls>
+            <div>
+                <p>Self Service</p>
+                <ul id="self-service-container"></ul>
+            </div>
+            <div>
+                <p>Full Service</p>
+                <ul id="full-service-container"></ul>
+            </div>
+            <div>
+                <p>Hybrid Service</p>
+                <ul id="hybrid-service-container"></ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="content">
+            <div class="contact" id="contact">
+                <div class="title"><h2>Contact</h4></div>
+                <div class="line"><hr size="1" width="100%" color="#FFF">  </div>
+                <div class="contact-info">
+                    <h4 id="contact-email-container"></h4>
+                    <h4 id="contact-number-container"></h4>
+                </div>
+            </div>
+            <div class="footer-logo">
+                <img src="../images/logo.png" alt="transparent logo">
+            </div>
+            <form action="" name="fcontact" method="POST" netlify>
+                <div class="message">
+                    <div class="left">
+                        <div>
+                            <label for="fname">Name*</label><br>
+                            <input style="width: 197px" type="text" id="fname" name="fname"><br><br>
+                            <label for="femail">E-mail*</label><br>
+                            <input style="width: 197px" type="email" id="femail" name="femail"><br><br>
+                            <label for="fphone">Phone*</label><br>
+                            <input style="width: 197px" type="tel" id="fphone" name="fphone"><br><br>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div>
+                            <label for="fmessage">Message*</label><br>
+                            <textarea id="fmessage" name="fmessage" rows="9" cols="60"></textarea><br><br>
+                        </div>
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </footer>
+
+    <!-- Prismic JS -->
+    <script src="js/prismic-ru.js" type="module"></script>
+
+    <!-- Swiper JS -->
+    <script src="../js/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js" type="module"></script>
+
+    <!-- Fadein stuff -->
+    <script src="../js/scrolls.min.js"></script>
+</body>
+</html>
