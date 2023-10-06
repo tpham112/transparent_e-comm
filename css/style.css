@@ -998,7 +998,7 @@ footer .right input:hover {
 }
 
 #masthead-content.active .headline-1 {
-  animation: fadeInOut 3s ease;
+  animation: fadeOut 3s ease;
 }
 
 #masthead-content.active .headline-2 {
@@ -1018,6 +1018,18 @@ footer .right input:hover {
 #masthead-content.active #subtext-2 {
   opacity: 1;
   transition: 2s ease 7.5s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes fadeInOut {
