@@ -23,10 +23,10 @@
                 <div class="logo"><a href="/ru"><img src="../images/logo.png"/></a></div>
             </div>
             <ul class="menu">
-                <li><a href="/ru#clients">Clients</a></li>
-                <li><a href="/ru#services">Services</a></li>
-                <li><a href="/ru#contact">Contact</a></li>
-                <li><a href="/ru/clients">Creative</a></li>
+                <li><a href="/ru#clients" class="nav-clients"></a></li>
+                <li><a href="/ru#services" class="nav-services"></a></li>
+                <li><a href="/ru#contact" class="nav-contact"></a></li>
+                <li><a href="/ru/clients" class="nav-creative"></a></li>
                 <div class="cancel-button">
                     <i class="fas fa-times"></i>
                 </div>
@@ -82,11 +82,11 @@
     </div>
 
     <section class="glance" id="glance-section" scrolls>
-        <p class="heading">TRANSPARENT at a glance:</p>
+        <p class="heading" id="glance-headline"></p>
         <div class="stats">
-            <p id="brand-section"><span class="number" id="brand-number"></span> <span class="description">brands</span></p>
-            <p id="ad-section"><span class="number" id="ad-spend"></span> <span class="description">million dollars of ad spend</span></p>
-            <p><span class="number">0</span> <span class="description">platform bans<span></span></p>
+            <p id="brand-section"><span class="number" id="brand-number"></span> <span id="brand-text" class="description"></span></p>
+            <p id="ad-section"><span class="number" id="ad-spend"></span> <span class="description" id="ad-spend-text"></span></p>
+            <p><span class="number">0</span> <span class="description" id="platform-bans-text"><span></span></p>
         </div>
     </section>
 
@@ -160,7 +160,7 @@
     <footer>
         <div class="content">
             <div class="contact" id="contact">
-                <div class="title"><h2>Contact</h4></div>
+                <div class="title"><h2 id="contact-headline"></h4></div>
                 <div class="line"><hr size="1" width="100%" color="#FFF">  </div>
                 <div class="contact-info">
                     <h4 id="contact-email-container"></h4>
@@ -174,17 +174,17 @@
                 <div class="message">
                     <div class="left">
                         <div>
-                            <label for="fname">Name*</label><br>
+                            <label for="fname" id="form-name"></label><br>
                             <input style="width: 197px" type="text" id="fname" name="fname"><br><br>
-                            <label for="femail">E-mail*</label><br>
+                            <label for="femail" id="email-name"></label><br>
                             <input style="width: 197px" type="email" id="femail" name="femail"><br><br>
-                            <label for="fphone">Phone*</label><br>
+                            <label for="fphone" id="phone-name"></label><br>
                             <input style="width: 197px" type="tel" id="fphone" name="fphone"><br><br>
                         </div>
                     </div>
                     <div class="right">
                         <div>
-                            <label for="fmessage">Message*</label><br>
+                            <label for="fmessage" id="form-message"></label><br>
                             <textarea id="fmessage" name="fmessage" rows="9" cols="60"></textarea><br><br>
                         </div>
                         <input type="submit" value="Submit">

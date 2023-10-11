@@ -271,6 +271,14 @@ const init = async () => {
     lang: locale,
   });
   const {
+    nav_clients,
+    nav_services,
+    nav_contact,
+    nav_creative,
+    count_headline,
+    brands,
+    ad_spend,
+    platform_bans,
     primary_headline_1,
     primary_headline_2,
     primary_headline_3,
@@ -285,10 +293,59 @@ const init = async () => {
     services1,
     self_service,
     hybrid_service,
+    contact_headline,
     contact_email,
     contact_number,
+    form_name,
+    form_email,
+    form_phone,
+    form_message,
   } = homepageDoc.data;
   const { clients_media } = clientsPageDoc.data;
+
+  const contactEmail = contact_email[0]?.text;
+  const contactEmailContainer = document.getElementById(
+    'contact-email-container'
+  );
+  contactEmailContainer.innerHTML = contactEmail;
+
+  const contactNumber = contact_number[0]?.text;
+  const contactNumberContainer = document.getElementById(
+    'contact-number-container'
+  );
+  contactNumberContainer.innerHTML = contactNumber;
+
+  const messageName = form_message[0]?.text;
+  const messageNameContainer = document.getElementById('form-message');
+  messageNameContainer.innerHTML = messageName;
+
+  const phoneEmail = form_phone[0]?.text;
+  const phoneEmailContainer = document.getElementById('phone-name');
+  phoneEmailContainer.innerHTML = phoneEmail;
+
+  const formEmail = form_email[0]?.text;
+  const formEmailContainer = document.getElementById('email-name');
+  formEmailContainer.innerHTML = formEmail;
+
+  const formName = form_name[0]?.text;
+  const formNameContainer = document.getElementById('form-name');
+  formNameContainer.innerHTML = formName;
+
+  const navClient = nav_clients[0].text;
+  const navClientContainer = document.querySelector('.nav-clients');
+  navClientContainer.innerHTML = navClient;
+
+  const navServices = nav_services[0].text;
+  const navServicesContainer = document.querySelector('.nav-services');
+  navServicesContainer.innerHTML = navServices;
+
+  const navContact = nav_contact[0].text;
+  const navContactContainer = document.querySelector('.nav-contact');
+  navContactContainer.innerHTML = navContact;
+
+  const navCreative = nav_creative[0].text;
+  const navCreativeContainer = document.querySelector('.nav-creative');
+  navCreativeContainer.innerHTML = navCreative;
 
   if (pathname == '/index.html' || pathname == '/') {
     let stateCheck = setInterval(() => {
@@ -301,6 +358,28 @@ const init = async () => {
         homeNav.classList.add('active');
       }
     }, 100);
+
+    const contactHeadline = contact_headline[0]?.text;
+    const contactHeadlineContainer =
+      document.getElementById('contact-headline');
+    contactHeadlineContainer.innerHTML = contactHeadline;
+
+    const countHeadline = count_headline[0]?.text;
+    const countHeadlineContainer = document.getElementById('glance-headline');
+    countHeadlineContainer.innerHTML = countHeadline;
+
+    const brandText = brands[0]?.text;
+    const brandTextContainer = document.getElementById('brand-text');
+    brandTextContainer.innerHTML = brandText;
+
+    const adSpend = ad_spend[0]?.text;
+    const adSpendContainer = document.getElementById('ad-spend-text');
+    adSpendContainer.innerHTML = adSpend;
+
+    const platformBans = platform_bans[0]?.text;
+    const platformBansContainer = document.getElementById('platform-bans-text');
+    platformBansContainer.innerHTML = platformBans;
+
     const primaryHeadline1 = primary_headline_1[0].text;
     const headline1Container = document.querySelector('.headline-1');
     headline1Container.innerHTML = primaryHeadline1;

@@ -2,8 +2,8 @@ import * as prismic from 'https://cdn.skypack.dev/@prismicio/client';
 
 const repositoryName = 'livetransparent';
 const routes = [
-  { type: 'homepage', uid: 'homepage', path: '/ru/index.html' },
-  { type: 'clients_page', uid: 'clients_page', path: '/ru/clients/index.html' },
+  { type: 'homepage', uid: 'homepage', path: '/it/index.html' },
+  { type: 'clients_page', uid: 'clients_page', path: '/it/clients/index.html' },
 ];
 const client = prismic.createClient(repositoryName, { routes });
 
@@ -224,8 +224,8 @@ const fillPdfSlider = (content) => {
 };
 
 if (
-  window.location.pathname === '/ru/index.html' ||
-  window.location.pathname === '/ru/'
+  window.location.pathname === '/it/index.html' ||
+  window.location.pathname === '/it/'
 ) {
   const validateEmail = (text) => {
     let reg = /^\w+([\.-]?\w+)*([\+][\.-]?\w+)?@\w+([\.-]?\w+)*(\.\w\w+)+$/;
@@ -260,8 +260,10 @@ if (
 
 const init = async () => {
   const pathname = window.location.pathname;
-  const homepageDoc = await client.getSingle('homepage', { lang: 'ru' });
-  const clientsPageDoc = await client.getSingle('clients_page', { lang: 'ru' });
+  const homepageDoc = await client.getSingle('homepage', { lang: 'it-it' });
+  const clientsPageDoc = await client.getSingle('clients_page', {
+    lang: 'it-it',
+  });
   const {
     nav_clients,
     nav_services,
@@ -339,7 +341,7 @@ const init = async () => {
   const navCreativeContainer = document.querySelector('.nav-creative');
   navCreativeContainer.innerHTML = navCreative;
 
-  if (pathname == '/ru/index.html' || pathname == '/ru/') {
+  if (pathname == '/it/index.html' || pathname == '/it/') {
     let stateCheck = setInterval(() => {
       if (document.readyState === 'complete') {
         clearInterval(stateCheck);
@@ -426,7 +428,7 @@ const init = async () => {
       'contact-number-container'
     );
     contactNumberContainer.innerHTML = `<a href="tel: ${contactNumberHTML}">${contactNumberHTML}</a>`;
-  } else if (pathname == '/ru/clients.html' || pathname == '/ru/clients/') {
+  } else if (pathname == '/it/clients.html' || pathname == '/it/clients/') {
     console.log(clients_media);
     fillClientMedia(clients_media);
   }
