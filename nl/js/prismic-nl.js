@@ -2,8 +2,8 @@ import * as prismic from 'https://cdn.skypack.dev/@prismicio/client';
 
 const repositoryName = 'livetransparent';
 const routes = [
-  { type: 'homepage', uid: 'homepage', path: '/ru/index.html' },
-  { type: 'clients_page', uid: 'clients_page', path: '/ru/clients/index.html' },
+  { type: 'homepage', uid: 'homepage', path: '/nl/index.html' },
+  { type: 'clients_page', uid: 'clients_page', path: '/nl/clients/index.html' },
 ];
 const client = prismic.createClient(repositoryName, { routes });
 
@@ -293,8 +293,8 @@ const fillPdfCategories = (categories) => {
 };
 
 if (
-  window.location.pathname === '/ru/index.html' ||
-  window.location.pathname === '/ru/'
+  window.location.pathname === '/nl/index.html' ||
+  window.location.pathname === '/nl/'
 ) {
   const validateEmail = (text) => {
     let reg = /^\w+([\.-]?\w+)*([\+][\.-]?\w+)?@\w+([\.-]?\w+)*(\.\w\w+)+$/;
@@ -329,10 +329,12 @@ if (
 
 const init = async () => {
   const pathname = window.location.pathname;
-  const homepageDoc = await client.getSingle('homepage', { lang: 'ru' });
-  const clientsPageDoc = await client.getSingle('clients_page', { lang: 'ru' });
+  const homepageDoc = await client.getSingle('homepage', { lang: 'nl-nl' });
+  const clientsPageDoc = await client.getSingle('clients_page', {
+    lang: 'nl-nl',
+  });
   const pdfCategories = await client.getAllByType('pdf_catego', {
-    lang: 'ru',
+    lang: 'nl-nl',
   });
   const {
     nav_clients,
@@ -413,7 +415,7 @@ const init = async () => {
   const navCreativeContainer = document.querySelector('.nav-creative');
   navCreativeContainer.innerHTML = navCreative;
 
-  if (pathname == '/ru/index.html' || pathname == '/ru/') {
+  if (pathname == '/nl/index.html' || pathname == '/nl/') {
     let stateCheck = setInterval(() => {
       if (document.readyState === 'complete') {
         clearInterval(stateCheck);
@@ -503,7 +505,7 @@ const init = async () => {
       'contact-number-container'
     );
     contactNumberContainer.innerHTML = `<a href="tel: ${contactNumberHTML}">${contactNumberHTML}</a>`;
-  } else if (pathname == '/ru/clients.html' || pathname == '/ru/clients/') {
+  } else if (pathname == '/nl/clients.html' || pathname == '/nl/clients/') {
     console.log(clients_media);
     fillClientMedia(clients_media);
   }

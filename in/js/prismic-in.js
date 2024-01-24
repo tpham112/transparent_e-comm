@@ -174,6 +174,28 @@ const fillClientMedia = (clients_media) => {
   }
 };
 
+var pdfSwiper = new Swiper('.pdfSwiper', {
+  speed: 700,
+  slidesPerView: 1,
+  centeredSlides: false,
+  spaceBetween: 10,
+  loop: false,
+  breakpoints: {
+    769: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: false,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
 // Extra PDF slider download stuff
 // content[i].pdf_link.url
 const pdfName = document.getElementById('pdf-name');
@@ -223,6 +245,53 @@ const fillPdfSlider = (content) => {
   });
 };
 
+const categorySelector = document.getElementById('pdf-categories');
+
+categorySelector.addEventListener('change', (e) => {
+  const currentValue = e.target.value;
+  const allItems = document.querySelectorAll('.swiper-slide');
+
+  allItems.forEach((item) => {
+    item.classList.add('hide');
+  });
+
+  let currentItems = document.querySelectorAll(
+    `[data-category=${currentValue}]`
+  );
+
+  currentItems.forEach((item) => {
+    item.classList.remove('hide');
+  });
+
+  if (currentValue === 'all') {
+    allItems.forEach((item) => {
+      item.classList.remove('hide');
+    });
+  }
+
+  pdfSwiper.update();
+});
+
+const populateAuditLink = (ctaLink, ctaText) => {
+  const auditLinks = document.querySelectorAll('.audit-link');
+
+  auditLinks.forEach((item) => {
+    item.setAttribute('href', ctaLink.url);
+    item.innerHTML = ctaText[0].text;
+  });
+};
+
+const fillPdfCategories = (categories) => {
+  for (let i = 0; i < categories.length; i++) {
+    const categoryValue = categories[i].data.category_name[0].text;
+    const categorySlug = categories[i].slugs[0];
+
+    const selectDropdown = document.getElementById('pdf-categories');
+
+    selectDropdown.innerHTML += `<option value="${categorySlug}">${categoryValue}</option>`;
+  }
+};
+
 if (
   window.location.pathname === '/in/index.html' ||
   window.location.pathname === '/in/'
@@ -264,6 +333,10 @@ const init = async () => {
   const clientsPageDoc = await client.getSingle('clients_page', {
     lang: 'en-in',
   });
+  const pdfCategories = await client.getAllByType('pdf_catego', {
+    lang: 'en-in',
+  });
+
   const {
     nav_clients,
     nav_services,
@@ -294,6 +367,8 @@ const init = async () => {
     form_email,
     form_phone,
     form_message,
+    cta_link,
+    cta_text,
   } = homepageDoc.data;
   const { clients_media } = clientsPageDoc.data;
 
@@ -405,6 +480,9 @@ const init = async () => {
     const subtaglineHTML = prismic.asHTML(subtagline);
     const subtaglineContainer = document.getElementById('subtagline-container');
     subtaglineContainer.innerHTML = subtaglineHTML;
+
+    fillPdfCategories(pdfCategories);
+    populateAuditLink(cta_link, cta_text);
 
     fillTestimonials(testimonials);
 
