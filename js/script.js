@@ -1,6 +1,5 @@
 import { CountUp } from './countup.min.js';
 
-console.log('LOAD SCRIPT');
 // Side Navigation JS Code //
 let menuButton = document.querySelector('.menu-button');
 let cancelButton = document.querySelector('.cancel-button');
@@ -73,28 +72,6 @@ var swiper = new Swiper('.myClientSwiper', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-  },
-});
-
-var pdfSwiper = new Swiper('.pdfSwiper', {
-  speed: 700,
-  slidesPerView: 1,
-  centeredSlides: false,
-  spaceBetween: 10,
-  loop: false,
-  breakpoints: {
-    769: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: false,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
   },
 });
 
