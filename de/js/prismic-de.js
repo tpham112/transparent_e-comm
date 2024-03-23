@@ -247,7 +247,7 @@ const fillPdfSlider = (content) => {
 
 const categorySelector = document.getElementById('pdf-categories');
 
-categorySelector.addEventListener('change', (e) => {
+categorySelector?.addEventListener('change', (e) => {
   const currentValue = e.target.value;
   const allItems = document.querySelectorAll('.swiper-slide');
 
